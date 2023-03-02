@@ -21,6 +21,5 @@ namespace WarehouseSimulation
         {
             return Trailer.Pop();
         }
-
     }
 }

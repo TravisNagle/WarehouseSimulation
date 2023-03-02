@@ -10,11 +10,11 @@ namespace WarehouseSimulation
     {
         public string Id { get; set; }
         private Queue<Truck> Line = new Queue<Truck>();
-        private double TotalSales { get; set; }
-        private int TotalCrates { get; set; }
-        private int TotalTrucks { get; set; }
-        private int TimeInUse { get; set; }
-        private int TimeNotInUse { get; set; }
+        public double TotalSales { get; set; }
+        public int TotalCrates { get; set; }
+        public int TotalTrucks { get; set; }
+        public int TimeInUse { get; set; }
+        public int TimeNotInUse { get; set; }
 
         public void JoinLine(Truck truck)
         {
