@@ -8,52 +8,94 @@ namespace WarehouseSimulation
 {
     internal class Warehouse
     {
-        private List<Dock> Docks= new List<Dock>();
+        private List<Dock> Docks = new List<Dock>();
         private Queue<Truck> Entrance = new Queue<Truck>();
 
         public void Run()
         {
             Random rand = new Random();
-            int timeIncrement = 0;
+            Dock dock1 = new Dock();
+
             int maxTime = 48;
-            int totalRevenue;
-            int totalCratePrice;
-            int totalCost;
-
-            Dock dock = new Dock();
-            Docks.Add(dock);
-
-            while(timeIncrement <= maxTime)
+            int increment = 0;
+            int nameCounter = 0;
+            while (increment <= maxTime)
             {
-                Truck truck = new Truck();
-                truck.Driver = "Dave";
-                int truckArrivalTime = rand.Next(timeIncrement, maxTime);
-                int crateAmount = rand.Next(10);
-                while(crateAmount > 0)
+                if(Entrance.Count > 0)
                 {
-                    int cratePrice = rand.Next(50, 501);
-                    Crate crate = new Crate();
-                    crate.Price = cratePrice;
-                    truck.Load(crate);
-                    crateAmount--;
+                    Truck arrivedTruck = Entrance.Dequeue();
+                    dock1.JoinLine(arrivedTruck);
+                    dock1.TotalTrucks++;
+                    dock1.TotalCrates += arrivedTruck.Trailer.Count;
                 }
 
-                if(timeIncrement == truckArrivalTime)
+                if(dock1.Line.Count > 0) 
                 {
-                    dock.JoinLine(truck);
-                    Console.WriteLine($"Time Increment: {timeIncrement}");
-                    Console.WriteLine($"Driver: {truck.Driver}");
+                    dock1.TimeInUse++;
+                    Truck dockedTruck = dock1.Line.Peek();
+
+                    if (dockedTruck.Trailer.Count == 0) 
+                    {
+                        break;
+                    }
+
+                    Crate unloadedCrate = dockedTruck.Unload();
+                    Console.WriteLine($"Time Unloaded: {increment}");
+                    Console.WriteLine($"Driver: {dockedTruck.Driver}");
+                    Console.WriteLine($"Company: {dockedTruck.DeliveryCompany}");
+                    Console.WriteLine($"Crate ID: {unloadedCrate.Id}");
+                    Console.WriteLine($"Crate Value: {unloadedCrate.Price}");
+
+                    if (dockedTruck.Trailer.Count != 0)
+                    {
+                        Console.WriteLine("Truck has more crates");
+                    }
+                    
+                    if(dockedTruck.Trailer.Count == 0)
+                    {
+                        dock1.SendOff();
+                        if (dock1.Line.Contains(dockedTruck) == false)
+                        {
+                            Console.WriteLine("Truck has no more crates and new truck already in dock ");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Truck has no more crates and no new truck already in dock");
+                        }
+                    }
                 }
-                timeIncrement++;
+
+                int arrivalTime = rand.Next(increment, maxTime + 1);
+                if (arrivalTime == increment)
+                {
+                    Console.WriteLine("Arrival Time " + arrivalTime);
+                    Truck truck = new Truck();
+                    truck.Driver = $"Driver {nameCounter}";
+                    truck.DeliveryCompany = $"Company {nameCounter++}";
+
+                    int crateCount = rand.Next(1, 6);
+                    while (crateCount > 0)
+                    {
+                        Crate crate = new Crate();
+                        truck.Load(crate);
+                        crateCount--;
+                    }
+                    Entrance.Enqueue(truck);
+                }
+                increment++;
             }
+        }
 
-
-            //Time increment that crate was unloaded
-            //Truck driver's name
-            //Delivery company's name
-            //Crates ID #
-            //Crate's value
-            //3 scenarios
+        public bool DockEmpty(Dock dock)
+        {
+            if(dock.Line.Peek() == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

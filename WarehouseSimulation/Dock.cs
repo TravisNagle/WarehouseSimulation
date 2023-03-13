@@ -9,7 +9,7 @@ namespace WarehouseSimulation
     internal class Dock
     {
         public string Id { get; set; }
-        private Queue<Truck> Line = new Queue<Truck>();
+        public Queue<Truck> Line = new Queue<Truck>();
         public double TotalSales { get; set; }
         public int TotalCrates { get; set; }
         public int TotalTrucks { get; set; }

@@ -10,7 +10,7 @@ namespace WarehouseSimulation
     {
         public string Driver { get; set; }
         public string DeliveryCompany { get; set; }
-        private Stack<Crate> Trailer = new Stack<Crate>();
+        public Stack<Crate> Trailer = new Stack<Crate>();
 
         public void Load(Crate crate)
         {

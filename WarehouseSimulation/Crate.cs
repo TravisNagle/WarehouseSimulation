@@ -8,7 +8,19 @@ namespace WarehouseSimulation
 {
     internal class Crate
     {
-        public string Id { get; set; }
+        public string _id = "";
+        public string Id 
+        { 
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                Random rand = new Random();
+                _id = "51432";             
+            }
+        }
         public double _price;
         public double Price
         {
