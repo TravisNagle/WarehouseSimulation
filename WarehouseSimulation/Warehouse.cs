@@ -62,6 +62,8 @@ namespace WarehouseSimulation
                             Console.WriteLine("Truck is empty and no other trucks in line");
                         }
                     }
+                    Console.WriteLine();
+                    
                 }
 
                 int arrivalTime = rand.Next(increment, maxTime + 1);

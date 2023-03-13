@@ -26,12 +26,9 @@ namespace WarehouseSimulation
         {
             get
             {
-                return _price;
-            }
-            set
-            {
                 Random rand = new Random();
                 _price = rand.Next(50, 501);
+                return _price;
             }
         }
     }
