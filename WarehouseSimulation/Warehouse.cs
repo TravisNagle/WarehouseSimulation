@@ -50,17 +50,16 @@ namespace WarehouseSimulation
                     {
                         Console.WriteLine("Truck has more crates");
                     }
-                    
-                    if(dockedTruck.Trailer.Count == 0)
+                    else if(dockedTruck.Trailer.Count == 0)
                     {
                         dock1.SendOff();
-                        if (dock1.Line.Contains(dockedTruck) == false)
+                        if(dock1.Line.Count != 0)
                         {
-                            Console.WriteLine("Truck has no more crates and new truck already in dock ");
+                            Console.WriteLine("Truck is empty and another truck is in line");
                         }
                         else
                         {
-                            Console.WriteLine("Truck has no more crates and no new truck already in dock");
+                            Console.WriteLine("Truck is empty and no other trucks in line");
                         }
                     }
                 }
