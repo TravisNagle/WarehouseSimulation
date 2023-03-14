@@ -13,12 +13,16 @@ namespace WarehouseSimulation
         { 
             get
             {
+                Random rand = new Random();
+                while(_id.Length < 4)
+                {
+                    _id += rand.Next(0, 10);
+                }
                 return _id;
             }
             set
             {
-                Random rand = new Random();
-                _id = "51432";             
+                _id = value;
             }
         }
         public double _price;

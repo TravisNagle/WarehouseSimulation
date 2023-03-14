@@ -19,7 +19,7 @@ namespace WarehouseSimulation
             int maxTime = 48;
             int increment = 0;
             int nameCounter = 0;
-            while (increment <= maxTime)
+            while (increment < maxTime)
             {
                 if(Entrance.Count > 0)
                 {
@@ -62,8 +62,11 @@ namespace WarehouseSimulation
                             Console.WriteLine("Truck is empty and no other trucks in line");
                         }
                     }
-                    Console.WriteLine();
-                    
+                    Console.WriteLine();                  
+                }
+                else
+                {
+                    dock1.TimeNotInUse++;
                 }
 
                 int arrivalTime = rand.Next(increment, maxTime + 1);
@@ -85,6 +88,8 @@ namespace WarehouseSimulation
                 }
                 increment++;
             }
+            Console.WriteLine($"Time in use: {dock1.TimeInUse}");
+            Console.WriteLine($"Time not in use: {dock1.TimeNotInUse}");
         }
 
         public bool DockEmpty(Dock dock)
