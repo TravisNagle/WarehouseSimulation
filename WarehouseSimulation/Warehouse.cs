@@ -14,7 +14,14 @@ namespace WarehouseSimulation
         public void Run()
         {
             Random rand = new Random();
-            Dock dock1 = new Dock();
+            Console.Write("Enter the number of docks you would like to sim: ");
+            int numOfDocks = int.Parse(Console.ReadLine());
+
+            for(int i = 0; i < numOfDocks; i++)
+            {
+                Dock dock = new Dock();
+                Docks.Add(dock);
+            }
 
             int maxTime = 48;
             int increment = 0;
@@ -24,15 +31,15 @@ namespace WarehouseSimulation
                 if(Entrance.Count > 0)
                 {
                     Truck arrivedTruck = Entrance.Dequeue();
-                    dock1.JoinLine(arrivedTruck);
-                    dock1.TotalTrucks++;
-                    dock1.TotalCrates += arrivedTruck.Trailer.Count;
+                    Docks[0].JoinLine(arrivedTruck);
+                    Docks[0].TotalTrucks++;
+                    Docks[0].TotalCrates += arrivedTruck.Trailer.Count;
                 }
 
-                if(dock1.Line.Count > 0) 
+                if (Docks[0].Line.Count > 0) //For multiple docks, check Docks list if a Dock has no line
                 {
-                    dock1.TimeInUse++;
-                    Truck dockedTruck = dock1.Line.Peek();
+                    Docks[0].TimeInUse++;
+                    Truck dockedTruck = Docks[0].Line.Peek();
 
                     if (dockedTruck.Trailer.Count == 0) 
                     {
@@ -52,8 +59,8 @@ namespace WarehouseSimulation
                     }
                     else if(dockedTruck.Trailer.Count == 0)
                     {
-                        dock1.SendOff();
-                        if(dock1.Line.Count != 0)
+                        Docks[0].SendOff();
+                        if(Docks[0].Line.Count != 0)
                         {
                             Console.WriteLine("Truck is empty and another truck is in line");
                         }
@@ -66,7 +73,7 @@ namespace WarehouseSimulation
                 }
                 else
                 {
-                    dock1.TimeNotInUse++;
+                    Docks[0].TimeNotInUse++;
                 }
 
                 int arrivalTime = rand.Next(increment, maxTime + 1);
@@ -88,8 +95,12 @@ namespace WarehouseSimulation
                 }
                 increment++;
             }
-            Console.WriteLine($"Time in use: {dock1.TimeInUse}");
-            Console.WriteLine($"Time not in use: {dock1.TimeNotInUse}");
+
+            foreach(Dock dock in Docks)
+            {
+                Console.WriteLine($"Time in use: {dock.TimeInUse}");
+                Console.WriteLine($"Time not in use: {dock.TimeNotInUse}");
+            }
         }
 
         public bool DockEmpty(Dock dock)
@@ -102,6 +113,22 @@ namespace WarehouseSimulation
             {
                 return false;
             }
+        }
+
+        public int ShortestDock(List<Dock> docks)
+        {
+            int shortestLine = docks[0].Line.Count;
+            int dockIndex = 0;
+            for(int i = 1; i < docks.Count; i++)
+            {
+                if (docks[i].Line.Count < shortestLine)
+                {
+                    shortestLine = docks[i].Line.Count;
+                    dockIndex = i;
+                }
+
+            }
+            return dockIndex;
         }
     }
 }
