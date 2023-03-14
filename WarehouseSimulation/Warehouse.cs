@@ -41,7 +41,7 @@ namespace WarehouseSimulation
 
                 foreach(Dock dock in Docks)
                 {
-                    if (dock.Line.Count > 0) //For multiple docks, check Docks list if a Dock has no line
+                    if (dock.Line.Count > 0)
                     {
                         int index = Docks.IndexOf(dock);
                         Truck dockedTruck = dock.Line.Peek();
@@ -54,6 +54,7 @@ namespace WarehouseSimulation
                         Console.WriteLine($"Crate Value: {unloadedCrate.Price}");
                         Console.WriteLine($"Dock used: {index}");
 
+                        dock.TotalSales += unloadedCrate.Price;
                         dock.TimeInUse++;
 
                         if (dockedTruck.Trailer.Count != 0)
@@ -123,14 +124,17 @@ namespace WarehouseSimulation
                 */
 
                 int arrivalTime = rand.Next(increment, maxTime + 1);
-                if (arrivalTime == increment)
+                Queue<int> times = new Queue<int>();
+                times.Enqueue(arrivalTime);
+                if (times.Peek() == increment)
                 {
+                    times.Dequeue();
                     Console.WriteLine("Arrival Time " + arrivalTime);
                     Truck truck = new Truck();
                     truck.Driver = $"Driver {nameCounter}";
                     truck.DeliveryCompany = $"Company {nameCounter++}";
 
-                    int crateCount = rand.Next(1, 6);
+                    int crateCount = rand.Next(8, 17);
                     while (crateCount > 0)
                     {
                         Crate crate = new Crate();
@@ -143,24 +147,24 @@ namespace WarehouseSimulation
                 increment++;
             }
 
-            foreach(Dock dock in Docks)
+            double totalRevenue = 0;
+            double totalCost = 0;
+
+            foreach (Dock dock in Docks)
             {
+                double dockCost = dock.TimeInUse * 100;
+
                 Console.WriteLine($"Time in use: {dock.TimeInUse}");
                 Console.WriteLine($"Time not in use: {dock.TimeNotInUse}");
                 Console.WriteLine($"Trucks processed: {dock.TotalTrucks}");
-            }
-        }
+                Console.WriteLine($"Total dock cost: ${dockCost}");
+                Console.WriteLine($"Total crate profits: ${dock.TotalSales}");
 
-        public bool DockEmpty(Dock dock)
-        {
-            if(dock.Line.Peek() == null)
-            {
-                return true;
+                totalRevenue += dock.TotalSales;
+                totalCost += dockCost;
             }
-            else
-            {
-                return false;
-            }
+            double totalProfit = totalRevenue - totalCost;
+            Console.WriteLine($"Total profit: ${totalProfit}");
         }
 
         public int ShortestDock(List<Dock> docks)
@@ -174,7 +178,6 @@ namespace WarehouseSimulation
                     shortestLine = docks[i].Line.Count;
                     dockIndex = i;
                 }
-
             }
             return dockIndex;
         }
