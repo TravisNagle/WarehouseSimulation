@@ -26,14 +26,16 @@ namespace WarehouseSimulation
             int maxTime = 48;
             int increment = 0;
             int nameCounter = 0;
+            int dockIndex = ShortestDock(Docks);
+
             while (increment < maxTime)
             {
                 if(Entrance.Count > 0)
                 {
                     Truck arrivedTruck = Entrance.Dequeue();
-                    Docks[0].JoinLine(arrivedTruck);
-                    Docks[0].TotalTrucks++;
-                    Docks[0].TotalCrates += arrivedTruck.Trailer.Count;
+                    Docks[dockIndex].JoinLine(arrivedTruck);
+                    Docks[dockIndex].TotalTrucks++;
+                    Docks[dockIndex].TotalCrates += arrivedTruck.Trailer.Count;
                 }
 
                 if (Docks[0].Line.Count > 0) //For multiple docks, check Docks list if a Dock has no line
