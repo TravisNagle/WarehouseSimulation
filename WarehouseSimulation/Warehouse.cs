@@ -26,11 +26,12 @@ namespace WarehouseSimulation
             int maxTime = 48;
             int increment = 0;
             int nameCounter = 0;
-            int dockIndex = ShortestDock(Docks);
 
             while (increment < maxTime)
             {
-                if(Entrance.Count > 0)
+                int dockIndex = ShortestDock(Docks);
+
+                if (Entrance.Count > 0)
                 {
                     Truck arrivedTruck = Entrance.Dequeue();
                     Docks[dockIndex].JoinLine(arrivedTruck);
@@ -38,15 +39,54 @@ namespace WarehouseSimulation
                     Docks[dockIndex].TotalCrates += arrivedTruck.Trailer.Count;
                 }
 
-                if (Docks[0].Line.Count > 0) //For multiple docks, check Docks list if a Dock has no line
+                foreach(Dock dock in Docks)
                 {
-                    Docks[0].TimeInUse++;
-                    Truck dockedTruck = Docks[0].Line.Peek();
-
-                    if (dockedTruck.Trailer.Count == 0) 
+                    if (dock.Line.Count > 0) //For multiple docks, check Docks list if a Dock has no line
                     {
-                        break;
+                        int index = Docks.IndexOf(dock);
+                        Truck dockedTruck = dock.Line.Peek();
+
+                        Crate unloadedCrate = dockedTruck.Unload();
+                        Console.WriteLine($"Time Unloaded: {increment}");
+                        Console.WriteLine($"Driver: {dockedTruck.Driver}");
+                        Console.WriteLine($"Company: {dockedTruck.DeliveryCompany}");
+                        Console.WriteLine($"Crate ID: {unloadedCrate.Id}");
+                        Console.WriteLine($"Crate Value: {unloadedCrate.Price}");
+                        Console.WriteLine($"Dock used: {index}");
+
+                        dock.TimeInUse++;
+
+                        if (dockedTruck.Trailer.Count != 0)
+                        {
+                            Console.WriteLine("Truck has more crates");
+                        }
+                        else if (dockedTruck.Trailer.Count == 0)
+                        {
+                            dock.SendOff();
+                            if (dock.Line.Count != 0)
+                            {
+                                dock.TotalTrucks++;
+                                Console.WriteLine("Truck is empty and another truck is in line");
+                            }
+                            else
+                            {
+                                dock.TotalTrucks++;
+                                Console.WriteLine("Truck is empty and no other trucks in line");
+                            }
+                        }
+                        Console.WriteLine();
                     }
+                    else
+                    {
+                        dock.TimeNotInUse++;
+                    }
+                }
+
+                /*
+                if (Docks[dockIndex].Line.Count > 0) //For multiple docks, check Docks list if a Dock has no line
+                {
+                    //Docks[dockIndex].TimeInUse++;
+                    Truck dockedTruck = Docks[dockIndex].Line.Peek();
 
                     Crate unloadedCrate = dockedTruck.Unload();
                     Console.WriteLine($"Time Unloaded: {increment}");
@@ -54,6 +94,7 @@ namespace WarehouseSimulation
                     Console.WriteLine($"Company: {dockedTruck.DeliveryCompany}");
                     Console.WriteLine($"Crate ID: {unloadedCrate.Id}");
                     Console.WriteLine($"Crate Value: {unloadedCrate.Price}");
+                    Console.WriteLine($"Dock used: {dockIndex}");
 
                     if (dockedTruck.Trailer.Count != 0)
                     {
@@ -61,13 +102,15 @@ namespace WarehouseSimulation
                     }
                     else if(dockedTruck.Trailer.Count == 0)
                     {
-                        Docks[0].SendOff();
-                        if(Docks[0].Line.Count != 0)
+                        Docks[dockIndex].SendOff();
+                        if(Docks[dockIndex].Line.Count != 0)
                         {
+                            Docks[dockIndex].TotalTrucks++;
                             Console.WriteLine("Truck is empty and another truck is in line");
                         }
                         else
                         {
+                            Docks[dockIndex].TotalTrucks++;
                             Console.WriteLine("Truck is empty and no other trucks in line");
                         }
                     }
@@ -75,8 +118,9 @@ namespace WarehouseSimulation
                 }
                 else
                 {
-                    Docks[0].TimeNotInUse++;
+                    //Docks[dockIndex].TimeNotInUse++;
                 }
+                */
 
                 int arrivalTime = rand.Next(increment, maxTime + 1);
                 if (arrivalTime == increment)
@@ -94,6 +138,7 @@ namespace WarehouseSimulation
                         crateCount--;
                     }
                     Entrance.Enqueue(truck);
+                    Console.WriteLine("A truck has entered the entrance");
                 }
                 increment++;
             }
@@ -102,6 +147,7 @@ namespace WarehouseSimulation
             {
                 Console.WriteLine($"Time in use: {dock.TimeInUse}");
                 Console.WriteLine($"Time not in use: {dock.TimeNotInUse}");
+                Console.WriteLine($"Trucks processed: {dock.TotalTrucks}");
             }
         }
 
