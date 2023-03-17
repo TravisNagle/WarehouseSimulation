@@ -20,15 +20,16 @@ namespace WarehouseSimulation
             for(int i = 0; i < numOfDocks; i++)
             {
                 Dock dock = new Dock();
+                dock.Id = $"TWD{i}";
                 Docks.Add(dock);
             }
 
             int maxTime = 48;
             int increment = 0;
             int nameCounter = 0;
-            int longestDockIndex = 0;
+            string longestDock = "";
             int longestDockLine = 0;
-            int truckCounter = 0;
+            double truckValue = 0;
 
             while (increment < maxTime)
             {
@@ -39,13 +40,13 @@ namespace WarehouseSimulation
                     Truck arrivedTruck = Entrance.Dequeue();
                     Docks[dockIndex].JoinLine(arrivedTruck);
                     Docks[dockIndex].TotalTrucks++;
-                    Docks[dockIndex].TotalCrates += arrivedTruck.Trailer.Count;
 
                     for (int i = 0; i < Docks.Count; i++)
                     {
                         if (Docks[i].Line.Count > longestDockLine)
                         {
-                            longestDockIndex = i;
+                            longestDockLine = Docks[i].Line.Count;
+                            longestDock = Docks[i].Id;
                         }
                     }
                 }
@@ -54,16 +55,18 @@ namespace WarehouseSimulation
                 {
                     if (dock.Line.Count > 0)
                     {
-                        int index = Docks.IndexOf(dock);
+                        //int index = Docks.IndexOf(dock);
                         Truck dockedTruck = dock.Line.Peek();
-
                         Crate unloadedCrate = dockedTruck.Unload();
+                        truckValue += unloadedCrate.Price;
+                        Docks[dockIndex].TotalCrates++;
+
                         Console.WriteLine($"Time Unloaded: {increment}");
                         Console.WriteLine($"Driver: {dockedTruck.Driver}");
                         Console.WriteLine($"Company: {dockedTruck.DeliveryCompany}");
                         Console.WriteLine($"Crate ID: {unloadedCrate.Id}");
                         Console.WriteLine($"Crate Value: {unloadedCrate.Price}");
-                        Console.WriteLine($"Dock used: {index}");
+                        Console.WriteLine($"Dock used: {dock.Id}");
 
                         dock.TotalSales += unloadedCrate.Price;
                         dock.TimeInUse++;
@@ -135,17 +138,30 @@ namespace WarehouseSimulation
                 totalCost += dockCost;
             }
 
-            foreach(Dock dock in Docks)
+            int truckCounter = 0;
+            int crateCounter = 0;
+            double crateProfit = 0;
+            double averageTimeInUse = 0;
+
+            foreach (Dock dock in Docks)
             {
                 truckCounter += dock.TotalTrucks;
+                crateCounter += dock.TotalCrates;
+                crateProfit += dock.TotalSales;
+                averageTimeInUse += dock.TimeInUse;
             }
 
             Console.WriteLine();
             double totalProfit = totalRevenue - totalCost;
             Console.WriteLine($"Total docks open: {numOfDocks}");
-            Console.WriteLine($"Longest dock line: Dock {longestDockIndex}");
+            Console.WriteLine($"Longest dock line: Dock {longestDock}");
             Console.WriteLine($"Total trucks processed: {truckCounter}");
-            Console.WriteLine($"Total profit: ${totalProfit}");
+            Console.WriteLine($"Total crates processed: {crateCounter}");
+            Console.WriteLine($"Total crate profits: ${String.Format("{0:0.00}", crateProfit)}");
+            Console.WriteLine($"Average crate value: ${String.Format("{0:0.00}",crateProfit / crateCounter)}");
+            Console.WriteLine($"Average truck value: ${String.Format("{0:0.00}", truckValue / truckCounter)}");
+            Console.WriteLine($"Average time in use: {String.Format("{0:0.00}",averageTimeInUse / maxTime)}");
+            Console.WriteLine($"Total profit: ${String.Format("{0:0.00}", totalProfit)}");
         }
 
         public int ShortestDock(List<Dock> docks)

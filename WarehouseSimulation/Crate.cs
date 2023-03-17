@@ -31,7 +31,7 @@ namespace WarehouseSimulation
             get
             {
                 Random rand = new Random();
-                _price = rand.Next(50, 501);
+                _price = rand.NextDouble() * (501 - 50) + 50;
                 return _price;
             }
         }
