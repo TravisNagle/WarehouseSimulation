@@ -26,6 +26,9 @@ namespace WarehouseSimulation
             int maxTime = 48;
             int increment = 0;
             int nameCounter = 0;
+            int longestDockIndex = 0;
+            int longestDockLine = 0;
+            int truckCounter = 0;
 
             while (increment < maxTime)
             {
@@ -37,6 +40,14 @@ namespace WarehouseSimulation
                     Docks[dockIndex].JoinLine(arrivedTruck);
                     Docks[dockIndex].TotalTrucks++;
                     Docks[dockIndex].TotalCrates += arrivedTruck.Trailer.Count;
+
+                    for (int i = 0; i < Docks.Count; i++)
+                    {
+                        if (Docks[i].Line.Count > longestDockLine)
+                        {
+                            longestDockIndex = i;
+                        }
+                    }
                 }
 
                 foreach(Dock dock in Docks)
@@ -83,46 +94,6 @@ namespace WarehouseSimulation
                     }
                 }
 
-                /*
-                if (Docks[dockIndex].Line.Count > 0) //For multiple docks, check Docks list if a Dock has no line
-                {
-                    //Docks[dockIndex].TimeInUse++;
-                    Truck dockedTruck = Docks[dockIndex].Line.Peek();
-
-                    Crate unloadedCrate = dockedTruck.Unload();
-                    Console.WriteLine($"Time Unloaded: {increment}");
-                    Console.WriteLine($"Driver: {dockedTruck.Driver}");
-                    Console.WriteLine($"Company: {dockedTruck.DeliveryCompany}");
-                    Console.WriteLine($"Crate ID: {unloadedCrate.Id}");
-                    Console.WriteLine($"Crate Value: {unloadedCrate.Price}");
-                    Console.WriteLine($"Dock used: {dockIndex}");
-
-                    if (dockedTruck.Trailer.Count != 0)
-                    {
-                        Console.WriteLine("Truck has more crates");
-                    }
-                    else if(dockedTruck.Trailer.Count == 0)
-                    {
-                        Docks[dockIndex].SendOff();
-                        if(Docks[dockIndex].Line.Count != 0)
-                        {
-                            Docks[dockIndex].TotalTrucks++;
-                            Console.WriteLine("Truck is empty and another truck is in line");
-                        }
-                        else
-                        {
-                            Docks[dockIndex].TotalTrucks++;
-                            Console.WriteLine("Truck is empty and no other trucks in line");
-                        }
-                    }
-                    Console.WriteLine();                  
-                }
-                else
-                {
-                    //Docks[dockIndex].TimeNotInUse++;
-                }
-                */
-
                 int arrivalTime = rand.Next(increment, maxTime + 1);
                 Queue<int> times = new Queue<int>();
                 times.Enqueue(arrivalTime);
@@ -163,7 +134,17 @@ namespace WarehouseSimulation
                 totalRevenue += dock.TotalSales;
                 totalCost += dockCost;
             }
+
+            foreach(Dock dock in Docks)
+            {
+                truckCounter += dock.TotalTrucks;
+            }
+
+            Console.WriteLine();
             double totalProfit = totalRevenue - totalCost;
+            Console.WriteLine($"Total docks open: {numOfDocks}");
+            Console.WriteLine($"Longest dock line: Dock {longestDockIndex}");
+            Console.WriteLine($"Total trucks processed: {truckCounter}");
             Console.WriteLine($"Total profit: ${totalProfit}");
         }
 
@@ -176,6 +157,21 @@ namespace WarehouseSimulation
                 if (docks[i].Line.Count < shortestLine)
                 {
                     shortestLine = docks[i].Line.Count;
+                    dockIndex = i;
+                }
+            }
+            return dockIndex;
+        }
+
+        public int LongestDock(List<Dock> docks)
+        {
+            int longestLine = docks[0].Line.Count;
+            int dockIndex = 0;
+            for(int i = 1; i < docks.Count; i++)
+            {
+                if (docks[i].Line.Count > longestLine)
+                {
+                    longestLine = docks[i].Line.Count;
                     dockIndex = i;
                 }
             }
