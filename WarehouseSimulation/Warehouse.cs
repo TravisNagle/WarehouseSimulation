@@ -73,7 +73,7 @@ namespace WarehouseSimulation
                     {
                         Console.WriteLine("Arrival Time " + increment);
                         Truck truck = new Truck();
-                        truck.Driver = $"Driver {nameCounter}"; //Change to random name
+                        truck.Driver = RandomName();
                         truck.DeliveryCompany = $"Company {nameCounter++}"; //Change to random company name
 
                         int crateCount = rand.Next(10, 21);
@@ -245,6 +245,52 @@ namespace WarehouseSimulation
                 }
             }
             return dockIndex;
+        }
+
+        public string RandomName()
+        {
+            Random rand = new Random();
+            string randomName = "";
+            int randomNum = rand.Next(0, 11);
+
+            switch(randomNum)
+            {
+                case 0:
+                    randomName = "Dave";
+                    break;
+                case 1:
+                    randomName = "Bob";
+                    break;
+                case 2:
+                    randomName = "Jeff";
+                    break;
+                case 3:
+                    randomName = "Ryan";
+                    break;
+                case 4:
+                    randomName = "George";
+                    break;
+                case 5:
+                    randomName = "Fred";
+                    break;
+                case 6:
+                    randomName = "Chris";
+                    break;
+                case 7:
+                    randomName = "Kyle";
+                    break;
+                case 8:
+                    randomName = "Seth";
+                    break;
+                case 9:
+                    randomName = "Danny";
+                    break;
+                case 10:
+                    randomName = "Alivia";
+                    break;
+            }
+
+            return randomName;
         }
     }
 }

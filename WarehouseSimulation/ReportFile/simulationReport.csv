@@ -1,250 +1,236 @@
 Dock ID,Time,Driver,Company,Crate ID,Crate Value
-TWD0,1,Driver 0,Company 0,9672,238.61
-TWD0,2,Driver 0,Company 0,1808,305.00
-TWD0,3,Driver 0,Company 0,7490,216.13
-TWD0,4,Driver 0,Company 0,7408,234.40
-TWD0,5,Driver 0,Company 0,6049,206.34
-TWD0,6,Driver 0,Company 0,9894,481.21
-TWD0,7,Driver 0,Company 0,8057,287.53
-TWD0,8,Driver 0,Company 0,5160,312.49
-TWD1,8,Driver 1,Company 1,4735,199.44
-TWD0,9,Driver 0,Company 0,1641,240.32
-TWD1,9,Driver 1,Company 1,7625,380.40
-TWD0,10,Driver 0,Company 0,2177,306.65
-TWD1,10,Driver 1,Company 1,6317,353.14
-TWD0,11,Driver 0,Company 0,2938,170.29
-TWD1,11,Driver 1,Company 1,3203,499.54
-TWD0,12,Driver 0,Company 0,8250,372.13
-TWD1,12,Driver 1,Company 1,2406,124.96
-TWD2,12,Driver 2,Company 2,8569,232.44
-TWD0,13,Driver 0,Company 0,8870,280.39
-TWD1,13,Driver 1,Company 1,2639,470.15
-TWD2,13,Driver 2,Company 2,0341,407.68
-TWD3,13,Driver 3,Company 3,5639,341.21
-TWD0,14,Driver 0,Company 0,7651,497.79
-TWD1,14,Driver 1,Company 1,6487,77.58
-TWD2,14,Driver 2,Company 2,5894,270.12
-TWD3,14,Driver 3,Company 3,9035,237.38
-TWD4,14,Driver 4,Company 4,0221,428.61
-TWD0,15,Driver 0,Company 0,4453,284.83
-TWD1,15,Driver 1,Company 1,6820,273.69
-TWD2,15,Driver 2,Company 2,3858,173.77
-TWD3,15,Driver 3,Company 3,8981,297.56
-TWD4,15,Driver 4,Company 4,1667,372.95
-TWD0,16,Driver 0,Company 0,5102,274.26
-TWD1,16,Driver 1,Company 1,6549,201.92
-TWD2,16,Driver 2,Company 2,0323,243.34
-TWD3,16,Driver 3,Company 3,6168,216.51
-TWD4,16,Driver 4,Company 4,3000,94.24
-TWD5,16,Driver 5,Company 5,0377,423.68
-TWD0,17,Driver 0,Company 0,7563,272.94
-TWD1,17,Driver 1,Company 1,5118,115.08
-TWD2,17,Driver 2,Company 2,5114,486.50
-TWD3,17,Driver 3,Company 3,9815,63.81
-TWD4,17,Driver 4,Company 4,1938,66.48
-TWD5,17,Driver 5,Company 5,2044,465.08
-TWD0,18,Driver 6,Company 6,6148,469.62
-TWD1,18,Driver 1,Company 1,2699,196.02
-TWD2,18,Driver 2,Company 2,0389,459.21
-TWD3,18,Driver 3,Company 3,4877,457.18
-TWD4,18,Driver 4,Company 4,4666,384.76
-TWD5,18,Driver 5,Company 5,2948,471.26
-TWD0,19,Driver 6,Company 6,9339,319.32
-TWD1,19,Driver 1,Company 1,0918,349.06
-TWD2,19,Driver 2,Company 2,9790,226.11
-TWD3,19,Driver 3,Company 3,3872,350.86
-TWD4,19,Driver 4,Company 4,1745,343.23
-TWD5,19,Driver 5,Company 5,6245,388.02
-TWD0,20,Driver 6,Company 6,4636,349.78
-TWD1,20,Driver 1,Company 1,9253,291.54
-TWD2,20,Driver 2,Company 2,7539,257.66
-TWD3,20,Driver 3,Company 3,7502,485.19
-TWD4,20,Driver 4,Company 4,4269,415.07
-TWD5,20,Driver 5,Company 5,4274,448.88
-TWD6,20,Driver 7,Company 7,3549,67.03
-TWD0,21,Driver 6,Company 6,2285,337.45
-TWD1,21,Driver 1,Company 1,3308,470.67
-TWD2,21,Driver 2,Company 2,3676,364.45
-TWD3,21,Driver 3,Company 3,2390,421.14
-TWD4,21,Driver 4,Company 4,6401,286.67
-TWD5,21,Driver 5,Company 5,0520,383.52
-TWD6,21,Driver 7,Company 7,6270,243.82
-TWD7,21,Driver 8,Company 8,9766,244.11
-TWD0,22,Driver 6,Company 6,3463,498.34
-TWD1,22,Driver 9,Company 9,3586,414.70
-TWD2,22,Driver 2,Company 2,5913,199.17
-TWD3,22,Driver 3,Company 3,9131,392.13
-TWD4,22,Driver 4,Company 4,2040,74.89
-TWD5,22,Driver 5,Company 5,3365,385.89
-TWD6,22,Driver 7,Company 7,5511,304.31
-TWD7,22,Driver 8,Company 8,0406,59.92
-TWD0,23,Driver 6,Company 6,8145,388.32
-TWD1,23,Driver 9,Company 9,5175,281.56
-TWD2,23,Driver 2,Company 2,5645,417.58
-TWD3,23,Driver 3,Company 3,2442,430.81
-TWD4,23,Driver 4,Company 4,1821,403.88
-TWD5,23,Driver 5,Company 5,1111,455.45
-TWD6,23,Driver 7,Company 7,5962,62.25
-TWD7,23,Driver 8,Company 8,2011,485.13
-TWD0,24,Driver 6,Company 6,6049,348.61
-TWD1,24,Driver 9,Company 9,6122,191.39
-TWD2,24,Driver 2,Company 2,4596,494.08
-TWD3,24,Driver 3,Company 3,3981,357.33
-TWD4,24,Driver 4,Company 4,4984,214.62
-TWD5,24,Driver 5,Company 5,8553,491.32
-TWD6,24,Driver 7,Company 7,5368,241.64
-TWD7,24,Driver 8,Company 8,2391,100.52
-TWD0,25,Driver 6,Company 6,0919,92.80
-TWD1,25,Driver 9,Company 9,0433,490.77
-TWD2,25,Driver 2,Company 2,7290,398.34
-TWD3,25,Driver 3,Company 3,5006,341.75
-TWD4,25,Driver 4,Company 4,5723,385.83
-TWD5,25,Driver 5,Company 5,7881,328.56
-TWD6,25,Driver 7,Company 7,7375,401.05
-TWD7,25,Driver 8,Company 8,8004,270.97
-TWD0,26,Driver 6,Company 6,7449,169.02
-TWD1,26,Driver 9,Company 9,9027,430.79
-TWD2,26,Driver 2,Company 2,4076,425.40
-TWD3,26,Driver 11,Company 11,3954,320.33
-TWD4,26,Driver 4,Company 4,9130,315.21
-TWD5,26,Driver 5,Company 5,7574,122.18
-TWD6,26,Driver 7,Company 7,5215,471.42
-TWD7,26,Driver 8,Company 8,0386,91.93
-TWD0,27,Driver 6,Company 6,7398,334.38
-TWD1,27,Driver 9,Company 9,8662,390.98
-TWD2,27,Driver 2,Company 2,3556,272.67
-TWD3,27,Driver 11,Company 11,4853,419.50
-TWD4,27,Driver 12,Company 12,7670,154.88
-TWD5,27,Driver 5,Company 5,0489,213.04
-TWD6,27,Driver 7,Company 7,1124,360.18
-TWD7,27,Driver 8,Company 8,4506,140.22
-TWD0,28,Driver 6,Company 6,8769,328.71
-TWD1,28,Driver 9,Company 9,0329,304.22
-TWD2,28,Driver 2,Company 2,7299,389.09
-TWD3,28,Driver 11,Company 11,3566,290.83
-TWD4,28,Driver 12,Company 12,9563,390.60
-TWD5,28,Driver 13,Company 13,2835,324.53
-TWD6,28,Driver 7,Company 7,7013,141.31
-TWD7,28,Driver 8,Company 8,5080,272.06
-TWD0,29,Driver 6,Company 6,8602,439.81
-TWD1,29,Driver 9,Company 9,1826,136.02
-TWD2,29,Driver 2,Company 2,5873,226.84
-TWD3,29,Driver 11,Company 11,4929,66.95
-TWD4,29,Driver 12,Company 12,9426,247.36
-TWD5,29,Driver 13,Company 13,8965,172.34
-TWD6,29,Driver 7,Company 7,7663,121.77
-TWD7,29,Driver 8,Company 8,3134,169.64
-TWD0,30,Driver 6,Company 6,3831,355.38
-TWD1,30,Driver 9,Company 9,4948,414.07
-TWD2,30,Driver 2,Company 2,6931,492.46
-TWD3,30,Driver 11,Company 11,2918,497.94
-TWD4,30,Driver 12,Company 12,0341,163.85
-TWD5,30,Driver 13,Company 13,9290,116.07
-TWD6,30,Driver 15,Company 15,2139,451.05
-TWD7,30,Driver 8,Company 8,1329,265.45
-TWD0,31,Driver 6,Company 6,5220,156.10
-TWD1,31,Driver 9,Company 9,5485,59.33
-TWD2,31,Driver 2,Company 2,7763,176.25
-TWD3,31,Driver 11,Company 11,5186,450.72
-TWD4,31,Driver 12,Company 12,8293,291.42
-TWD5,31,Driver 13,Company 13,8770,425.76
-TWD6,31,Driver 15,Company 15,8405,426.77
-TWD7,31,Driver 8,Company 8,0603,382.59
-TWD0,32,Driver 6,Company 6,2344,335.05
-TWD1,32,Driver 9,Company 9,8485,397.91
-TWD3,32,Driver 11,Company 11,4071,88.10
-TWD4,32,Driver 12,Company 12,3593,110.72
-TWD5,32,Driver 13,Company 13,9452,345.61
-TWD6,32,Driver 15,Company 15,6516,331.12
-TWD7,32,Driver 8,Company 8,2931,387.28
-TWD0,33,Driver 6,Company 6,2767,270.88
-TWD1,33,Driver 9,Company 9,9289,242.78
-TWD2,33,Driver 16,Company 16,6781,368.28
-TWD3,33,Driver 11,Company 11,6401,370.76
-TWD4,33,Driver 12,Company 12,6463,265.70
-TWD5,33,Driver 13,Company 13,0581,399.26
-TWD6,33,Driver 15,Company 15,1154,258.29
-TWD7,33,Driver 8,Company 8,0854,449.89
-TWD0,34,Driver 6,Company 6,6571,324.40
-TWD1,34,Driver 14,Company 14,8768,90.24
-TWD2,34,Driver 16,Company 16,1929,182.86
-TWD3,34,Driver 11,Company 11,1348,389.06
-TWD4,34,Driver 12,Company 12,6710,64.07
-TWD5,34,Driver 13,Company 13,3943,459.10
-TWD6,34,Driver 15,Company 15,1603,83.29
-TWD7,34,Driver 8,Company 8,2298,312.80
-TWD0,35,Driver 6,Company 6,2201,465.94
-TWD1,35,Driver 14,Company 14,2937,142.36
-TWD2,35,Driver 16,Company 16,2868,355.27
-TWD3,35,Driver 11,Company 11,4029,90.06
-TWD4,35,Driver 12,Company 12,2960,77.62
-TWD5,35,Driver 13,Company 13,0609,451.41
-TWD6,35,Driver 15,Company 15,4199,464.27
-TWD7,35,Driver 8,Company 8,6477,111.67
-TWD0,36,Driver 6,Company 6,7078,178.13
-TWD1,36,Driver 14,Company 14,9551,61.31
-TWD2,36,Driver 16,Company 16,1044,208.16
-TWD4,36,Driver 12,Company 12,2037,486.37
-TWD5,36,Driver 13,Company 13,7399,276.81
-TWD6,36,Driver 15,Company 15,9384,253.30
-TWD7,36,Driver 8,Company 8,0154,236.88
-TWD0,37,Driver 10,Company 10,6414,497.78
-TWD1,37,Driver 14,Company 14,0861,170.28
-TWD2,37,Driver 16,Company 16,1718,365.18
-TWD4,37,Driver 12,Company 12,7281,363.87
-TWD5,37,Driver 13,Company 13,6524,360.58
-TWD6,37,Driver 15,Company 15,5827,186.11
-TWD7,37,Driver 8,Company 8,9121,121.30
-TWD0,38,Driver 10,Company 10,9975,422.82
-TWD1,38,Driver 14,Company 14,6236,164.35
-TWD2,38,Driver 16,Company 16,6027,431.90
-TWD4,38,Driver 12,Company 12,8616,217.44
-TWD5,38,Driver 13,Company 13,9936,279.88
-TWD6,38,Driver 15,Company 15,7402,415.63
-TWD7,38,Driver 8,Company 8,4009,110.95
-TWD0,39,Driver 10,Company 10,7742,400.49
-TWD1,39,Driver 14,Company 14,7573,326.07
-TWD2,39,Driver 16,Company 16,5757,271.97
-TWD4,39,Driver 12,Company 12,0225,392.90
-TWD5,39,Driver 13,Company 13,1102,390.07
-TWD6,39,Driver 15,Company 15,2941,421.83
-TWD7,39,Driver 8,Company 8,7317,485.50
-TWD0,40,Driver 10,Company 10,4951,320.62
-TWD1,40,Driver 14,Company 14,9868,274.30
-TWD2,40,Driver 16,Company 16,9404,347.93
-TWD4,40,Driver 12,Company 12,3131,182.51
-TWD5,40,Driver 13,Company 13,3279,192.39
-TWD7,40,Driver 8,Company 8,1600,496.06
-TWD0,41,Driver 10,Company 10,4734,438.97
-TWD1,41,Driver 14,Company 14,1674,93.72
-TWD2,41,Driver 16,Company 16,9003,312.86
-TWD4,41,Driver 12,Company 12,7302,169.80
-TWD5,41,Driver 13,Company 13,7439,436.71
-TWD0,42,Driver 10,Company 10,6421,251.44
-TWD1,42,Driver 14,Company 14,6204,118.70
-TWD2,42,Driver 16,Company 16,6836,197.05
-TWD4,42,Driver 12,Company 12,0562,413.17
-TWD5,42,Driver 13,Company 13,6835,281.38
-TWD0,43,Driver 10,Company 10,9945,147.90
-TWD1,43,Driver 14,Company 14,7875,335.97
-TWD2,43,Driver 16,Company 16,4833,288.05
-TWD4,43,Driver 12,Company 12,6753,452.04
-TWD5,43,Driver 13,Company 13,0645,187.83
-TWD0,44,Driver 10,Company 10,1460,416.76
-TWD1,44,Driver 14,Company 14,9492,225.97
-TWD2,44,Driver 16,Company 16,3501,93.89
-TWD4,44,Driver 12,Company 12,3490,279.58
-TWD5,44,Driver 13,Company 13,4844,182.53
-TWD0,45,Driver 10,Company 10,1281,240.52
-TWD1,45,Driver 14,Company 14,2130,283.49
-TWD2,45,Driver 16,Company 16,2989,68.91
-TWD4,45,Driver 12,Company 12,9621,293.85
-TWD5,45,Driver 13,Company 13,9360,314.20
-TWD0,46,Driver 10,Company 10,8131,62.74
-TWD1,46,Driver 14,Company 14,4954,368.43
-TWD2,46,Driver 16,Company 16,1425,217.33
-TWD4,46,Driver 12,Company 12,0857,431.00
-TWD5,46,Driver 13,Company 13,1023,477.11
-TWD0,47,Driver 10,Company 10,4013,495.21
-TWD1,47,Driver 14,Company 14,0117,353.73
-TWD2,47,Driver 16,Company 16,9877,125.10
+TWD0,7,George,Company 0,4673,380.53
+TWD0,8,George,Company 0,5565,110.49
+TWD0,9,George,Company 0,7887,460.34
+TWD0,10,George,Company 0,6001,283.42
+TWD0,11,George,Company 0,3153,192.18
+TWD1,11,George,Company 1,4761,203.66
+TWD0,12,George,Company 0,3449,495.26
+TWD1,12,George,Company 1,6872,235.97
+TWD0,13,George,Company 0,6750,353.89
+TWD1,13,George,Company 1,4715,379.88
+TWD2,13,Danny,Company 2,6400,388.84
+TWD0,14,George,Company 0,1751,486.39
+TWD1,14,George,Company 1,0599,96.26
+TWD2,14,Danny,Company 2,3125,100.87
+TWD3,14,Alivia,Company 3,3745,105.09
+TWD0,15,George,Company 0,7049,207.66
+TWD1,15,George,Company 1,0425,481.44
+TWD2,15,Danny,Company 2,4588,392.92
+TWD3,15,Alivia,Company 3,5718,153.85
+TWD4,15,Alivia,Company 4,7240,151.04
+TWD0,16,George,Company 0,3574,259.53
+TWD1,16,George,Company 1,8562,137.60
+TWD2,16,Danny,Company 2,1668,185.30
+TWD3,16,Alivia,Company 3,1825,200.58
+TWD4,16,Alivia,Company 4,1767,259.28
+TWD0,17,George,Company 0,8388,220.13
+TWD1,17,George,Company 1,4391,235.91
+TWD2,17,Danny,Company 2,7521,103.94
+TWD3,17,Alivia,Company 3,6271,254.09
+TWD4,17,Alivia,Company 4,0579,402.15
+TWD5,17,Chris,Company 5,6515,98.72
+TWD0,18,George,Company 0,5099,119.00
+TWD1,18,George,Company 1,1651,352.71
+TWD2,18,Danny,Company 2,7554,102.50
+TWD3,18,Alivia,Company 3,4175,440.75
+TWD4,18,Alivia,Company 4,3234,406.36
+TWD5,18,Chris,Company 5,4556,147.52
+TWD0,19,George,Company 0,5842,454.29
+TWD1,19,George,Company 1,3203,463.44
+TWD2,19,Danny,Company 2,7002,278.21
+TWD3,19,Alivia,Company 3,1513,195.91
+TWD4,19,Alivia,Company 4,6481,275.93
+TWD5,19,Chris,Company 5,6797,278.63
+TWD6,19,Chris,Company 6,2212,335.55
+TWD0,20,George,Company 0,9602,489.98
+TWD1,20,George,Company 1,5267,96.59
+TWD2,20,Danny,Company 2,7464,256.76
+TWD3,20,Alivia,Company 3,3522,160.30
+TWD4,20,Alivia,Company 4,6837,56.98
+TWD5,20,Chris,Company 5,9011,153.82
+TWD6,20,Chris,Company 6,5192,277.18
+TWD0,21,George,Company 0,7247,349.41
+TWD1,21,George,Company 1,4792,477.06
+TWD2,21,Danny,Company 2,0948,57.29
+TWD3,21,Alivia,Company 3,1645,380.17
+TWD4,21,Alivia,Company 4,5940,403.49
+TWD5,21,Chris,Company 5,6384,390.46
+TWD6,21,Chris,Company 6,3783,139.91
+TWD7,21,Chris,Company 7,3905,181.14
+TWD0,22,George,Company 0,7439,285.38
+TWD1,22,George,Company 1,7246,376.56
+TWD2,22,Danny,Company 2,8472,216.06
+TWD3,22,Alivia,Company 3,4477,307.41
+TWD4,22,Alivia,Company 4,3253,398.43
+TWD5,22,Chris,Company 5,9361,289.13
+TWD6,22,Chris,Company 6,0800,493.92
+TWD7,22,Chris,Company 7,3724,441.78
+TWD0,23,George,Company 0,3478,489.53
+TWD1,23,George,Company 1,0888,285.49
+TWD2,23,Danny,Company 2,5222,100.08
+TWD3,23,Alivia,Company 3,6290,328.87
+TWD4,23,Alivia,Company 4,0979,469.39
+TWD5,23,Chris,Company 5,8883,105.20
+TWD6,23,Chris,Company 6,7529,268.65
+TWD7,23,Chris,Company 7,8084,73.14
+TWD1,24,George,Company 1,3543,152.11
+TWD2,24,Danny,Company 2,6966,143.18
+TWD3,24,Alivia,Company 3,7531,418.91
+TWD4,24,Alivia,Company 4,2764,397.93
+TWD5,24,Chris,Company 5,0340,486.55
+TWD6,24,Chris,Company 6,6361,116.47
+TWD7,24,Chris,Company 7,8993,323.22
+TWD2,25,Danny,Company 2,9996,95.37
+TWD3,25,Alivia,Company 3,4896,194.65
+TWD4,25,Alivia,Company 4,8462,277.00
+TWD5,25,Chris,Company 5,1710,107.48
+TWD6,25,Chris,Company 6,7755,360.87
+TWD7,25,Chris,Company 7,1397,107.00
+TWD0,26,George,Company 8,4654,460.73
+TWD2,26,Danny,Company 2,9543,283.72
+TWD3,26,Alivia,Company 3,1072,487.17
+TWD4,26,Alivia,Company 4,3177,491.25
+TWD5,26,Chris,Company 5,5515,121.88
+TWD6,26,Chris,Company 6,7296,380.48
+TWD7,26,Chris,Company 7,5309,145.93
+TWD0,27,George,Company 8,0950,120.66
+TWD1,27,Fred,Company 9,1730,322.15
+TWD2,27,Danny,Company 2,5033,366.08
+TWD4,27,Alivia,Company 4,6400,418.34
+TWD5,27,Chris,Company 5,0141,101.09
+TWD6,27,Chris,Company 6,9867,375.32
+TWD7,27,Chris,Company 7,0071,138.91
+TWD0,28,George,Company 8,1264,447.66
+TWD1,28,Fred,Company 9,6348,71.83
+TWD2,28,Danny,Company 2,7009,254.71
+TWD3,28,Danny,Company 10,4003,448.49
+TWD4,28,Alivia,Company 4,0409,176.48
+TWD5,28,Chris,Company 5,3578,173.29
+TWD6,28,Chris,Company 6,9646,146.37
+TWD7,28,Chris,Company 7,0041,179.00
+TWD0,29,George,Company 8,1112,116.78
+TWD1,29,Fred,Company 9,3590,488.32
+TWD2,29,Danny,Company 2,8703,107.71
+TWD3,29,Danny,Company 10,8596,174.25
+TWD4,29,Alivia,Company 4,2324,202.74
+TWD6,29,Chris,Company 6,8468,426.21
+TWD7,29,Chris,Company 7,9428,303.17
+TWD0,30,George,Company 8,5665,128.43
+TWD1,30,Fred,Company 9,7063,298.18
+TWD2,30,Danny,Company 2,5504,258.59
+TWD3,30,Danny,Company 10,8121,136.84
+TWD4,30,Alivia,Company 4,0516,233.31
+TWD6,30,Chris,Company 6,5197,182.04
+TWD7,30,Chris,Company 7,8552,305.49
+TWD0,31,George,Company 8,8720,89.67
+TWD1,31,Fred,Company 9,0217,284.07
+TWD2,31,Danny,Company 11,4269,55.51
+TWD3,31,Danny,Company 10,1691,248.07
+TWD4,31,Alivia,Company 4,2573,286.19
+TWD6,31,Chris,Company 6,0504,428.68
+TWD7,31,Chris,Company 7,2145,297.63
+TWD0,32,George,Company 8,2046,481.99
+TWD1,32,Fred,Company 9,1370,372.47
+TWD2,32,Danny,Company 11,3912,121.68
+TWD3,32,Danny,Company 10,2108,360.04
+TWD4,32,Alivia,Company 4,8946,253.03
+TWD5,32,George,Company 12,5855,434.49
+TWD6,32,Chris,Company 6,0816,125.87
+TWD7,32,Chris,Company 7,7067,94.12
+TWD0,33,George,Company 8,4035,297.63
+TWD1,33,Fred,Company 9,2616,483.00
+TWD2,33,Danny,Company 11,3772,101.71
+TWD3,33,Danny,Company 10,4125,389.76
+TWD5,33,George,Company 12,6808,114.11
+TWD6,33,Chris,Company 6,3358,164.33
+TWD7,33,Chris,Company 7,8574,366.21
+TWD0,34,George,Company 8,4448,180.80
+TWD1,34,Fred,Company 9,2323,173.80
+TWD2,34,Danny,Company 11,8155,418.23
+TWD3,34,Danny,Company 10,7884,138.50
+TWD5,34,George,Company 12,4229,319.27
+TWD6,34,Chris,Company 6,4327,359.94
+TWD7,34,Chris,Company 7,2989,494.26
+TWD0,35,George,Company 8,9603,320.39
+TWD1,35,Fred,Company 9,6886,393.27
+TWD2,35,Danny,Company 11,9701,324.26
+TWD3,35,Danny,Company 10,1005,241.31
+TWD5,35,George,Company 12,2258,421.05
+TWD6,35,Chris,Company 6,7326,493.28
+TWD7,35,Chris,Company 7,0400,79.70
+TWD0,36,George,Company 8,4929,314.55
+TWD1,36,Fred,Company 9,7595,176.12
+TWD2,36,Danny,Company 11,4909,139.35
+TWD3,36,Danny,Company 10,0879,315.60
+TWD4,36,George,Company 13,7372,223.73
+TWD5,36,George,Company 12,6007,478.29
+TWD6,36,Chris,Company 6,4260,190.33
+TWD7,36,Chris,Company 7,6976,146.31
+TWD0,37,George,Company 8,1434,266.35
+TWD1,37,Fred,Company 9,7821,96.55
+TWD2,37,Danny,Company 11,2037,197.41
+TWD3,37,Danny,Company 10,7031,153.31
+TWD4,37,George,Company 13,5729,155.98
+TWD5,37,George,Company 12,5292,427.98
+TWD6,37,Chris,Company 6,8877,132.74
+TWD7,37,Chris,Company 7,9566,52.67
+TWD0,38,George,Company 8,7450,378.06
+TWD1,38,Fred,Company 9,4890,399.80
+TWD2,38,Danny,Company 11,6540,300.37
+TWD3,38,Danny,Company 10,7062,59.24
+TWD4,38,George,Company 13,2205,101.60
+TWD5,38,George,Company 12,6846,251.51
+TWD6,38,Chris,Company 6,6799,299.11
+TWD7,38,Chris,Company 7,6860,475.81
+TWD0,39,George,Company 8,3340,253.10
+TWD1,39,Fred,Company 9,3245,399.58
+TWD2,39,Danny,Company 11,4532,280.27
+TWD3,39,Danny,Company 10,3562,493.73
+TWD4,39,George,Company 13,8538,331.01
+TWD5,39,George,Company 12,2439,391.74
+TWD6,39,Seth,Company 14,4317,320.69
+TWD0,40,George,Company 8,7359,421.59
+TWD1,40,Fred,Company 9,2851,443.75
+TWD2,40,Danny,Company 11,4910,350.86
+TWD3,40,Danny,Company 10,2133,316.66
+TWD4,40,George,Company 13,0542,499.65
+TWD5,40,George,Company 12,9807,78.58
+TWD6,40,Seth,Company 14,2554,350.97
+TWD0,41,George,Company 8,8987,295.92
+TWD1,41,Fred,Company 9,5673,124.67
+TWD2,41,Danny,Company 11,2273,292.17
+TWD3,41,Danny,Company 10,3695,276.76
+TWD4,41,George,Company 13,1144,346.99
+TWD5,41,George,Company 12,2635,247.37
+TWD6,41,Seth,Company 14,1381,473.23
+TWD0,42,George,Company 8,1622,176.83
+TWD3,42,Danny,Company 10,2843,497.75
+TWD4,42,George,Company 13,0706,248.40
+TWD5,42,George,Company 12,8857,127.92
+TWD6,42,Seth,Company 14,2371,129.85
+TWD0,43,George,Company 8,2892,367.31
+TWD1,43,Seth,Company 15,6091,245.03
+TWD3,43,Danny,Company 10,6655,418.42
+TWD4,43,George,Company 13,0241,304.14
+TWD5,43,George,Company 12,1474,329.79
+TWD6,43,Seth,Company 14,8984,391.80
+TWD1,44,Seth,Company 15,5509,338.18
+TWD4,44,George,Company 13,8119,438.43
+TWD5,44,George,Company 12,6135,231.19
+TWD6,44,Seth,Company 14,0601,137.03
+TWD0,45,Danny,Company 16,4581,195.18
+TWD1,45,Seth,Company 15,8059,355.75
+TWD4,45,George,Company 13,6029,253.00
+TWD5,45,George,Company 12,9148,422.63
+TWD6,45,Seth,Company 14,3912,492.94
+TWD0,46,Danny,Company 16,5718,265.57
+TWD1,46,Seth,Company 15,1259,275.66
+TWD4,46,George,Company 13,2740,448.98
+TWD5,46,George,Company 12,2810,348.51
+TWD6,46,Seth,Company 14,8008,480.78
+TWD0,47,Danny,Company 16,6592,126.24
+TWD1,47,Seth,Company 15,7971,415.22
+TWD4,47,George,Company 13,2221,408.23
+TWD5,47,George,Company 12,8124,425.53
+TWD6,47,Seth,Company 14,8225,173.06
