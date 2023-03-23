@@ -58,18 +58,25 @@ namespace WarehouseSimulation
                 {
                     int dockIndex = ShortestDock(Docks);
 
-                    int arrivalTime = rand.Next(increment, maxTime + 1);
-                    Queue<int> times = new Queue<int>();
-                    times.Enqueue(arrivalTime);
-                    if (times.Peek() == increment)
+                    int arrivalTime = 0;
+
+                    if (increment < 12 || increment > 36)
                     {
-                        times.Dequeue();
-                        Console.WriteLine("Arrival Time " + arrivalTime);
+                        arrivalTime = rand.Next(1, 60);
+                    }
+                    else
+                    {
+                        arrivalTime = rand.Next(100);
+                    }
+
+                    if (arrivalTime > 50)
+                    {
+                        Console.WriteLine("Arrival Time " + increment);
                         Truck truck = new Truck();
                         truck.Driver = $"Driver {nameCounter}"; //Change to random name
                         truck.DeliveryCompany = $"Company {nameCounter++}"; //Change to random company name
 
-                        int crateCount = rand.Next(8, 17);
+                        int crateCount = rand.Next(10, 21);
                         while (crateCount > 0)
                         {
                             Crate crate = new Crate();
