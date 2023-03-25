@@ -41,6 +41,7 @@ namespace WarehouseSimulation
             string longestDock = "";
             int longestDockLine = 0;
             double truckValue = 0;
+            
 
             for (int i = 0; i < numOfDocks; i++)
             {
@@ -57,6 +58,7 @@ namespace WarehouseSimulation
                 while (increment < maxTime)
                 {
                     int dockIndex = ShortestDock(Docks);
+                    bool trucksUnloading = false;
 
                     int arrivalTime = 0;
 
@@ -73,7 +75,7 @@ namespace WarehouseSimulation
                     {
                         Console.WriteLine("Arrival Time " + increment);
                         Truck truck = new Truck();
-                        truck.Driver = RandomName();
+                        //truck.Driver = RandomName();
                         truck.DeliveryCompany = $"Company {nameCounter++}"; //Change to random company name
 
                         int crateCount = rand.Next(10, 21);
@@ -92,6 +94,7 @@ namespace WarehouseSimulation
                         Truck arrivedTruck = Entrance.Dequeue();
                         Docks[dockIndex].JoinLine(arrivedTruck);
                         Docks[dockIndex].TotalTrucks++;
+                        trucksUnloading = true;
 
                         for (int i = 0; i < Docks.Count; i++)
                         {
@@ -112,13 +115,14 @@ namespace WarehouseSimulation
                             truckValue += unloadedCrate.Price;
                             Docks[dockIndex].TotalCrates++;
 
+                            /*
                             Console.WriteLine($"Time Unloaded: {increment}");
                             Console.WriteLine($"Driver: {dockedTruck.Driver}");
                             Console.WriteLine($"Company: {dockedTruck.DeliveryCompany}");
                             Console.WriteLine($"Crate ID: {unloadedCrate.Id}");
                             Console.WriteLine($"Crate Value: {String.Format("{0:0.00}", unloadedCrate.Price)}");
                             Console.WriteLine($"Dock used: {dock.Id}");
-
+                            */
                             writer.Write($"{dock.Id},");
                             writer.Write($"{increment},");
                             writer.Write($"{dockedTruck.Driver},");
@@ -149,12 +153,25 @@ namespace WarehouseSimulation
                                 }
                             }
                             Console.WriteLine();
+                            
                         }
                         else
                         {
                             dock.TimeNotInUse++;
                         }
                     }
+
+                    if(trucksUnloading)
+                    {
+                        foreach (var dock in Docks)
+                        {
+                            Console.Write($"|-------|\n");
+                            Console.Write($"|       |\n");
+                            Console.Write($"|   {dock.Line.Count}   |\n");
+                            Console.WriteLine();
+                        }
+                    }                  
+
                     increment++;
                 }
             }
@@ -181,11 +198,13 @@ namespace WarehouseSimulation
             {
                 double dockCost = dock.TimeInUse * 100;
 
+                Console.WriteLine($"Dock ID: {dock.Id}");
                 Console.WriteLine($"Time in use: {dock.TimeInUse}");
                 Console.WriteLine($"Time not in use: {dock.TimeNotInUse}");
                 Console.WriteLine($"Trucks processed: {dock.TotalTrucks}");
                 Console.WriteLine($"Total dock cost: ${dockCost}");
-                Console.WriteLine($"Total crate profits: ${dock.TotalSales}");
+                Console.WriteLine($"Total crate profits: ${String.Format("{0:0.00}", dock.TotalSales)}");
+                Console.WriteLine();
 
                 totalRevenue += dock.TotalSales;
                 totalCost += dockCost;
@@ -245,52 +264,6 @@ namespace WarehouseSimulation
                 }
             }
             return dockIndex;
-        }
-
-        public string RandomName()
-        {
-            Random rand = new Random();
-            string randomName = "";
-            int randomNum = rand.Next(0, 11);
-
-            switch(randomNum)
-            {
-                case 0:
-                    randomName = "Dave";
-                    break;
-                case 1:
-                    randomName = "Bob";
-                    break;
-                case 2:
-                    randomName = "Jeff";
-                    break;
-                case 3:
-                    randomName = "Ryan";
-                    break;
-                case 4:
-                    randomName = "George";
-                    break;
-                case 5:
-                    randomName = "Fred";
-                    break;
-                case 6:
-                    randomName = "Chris";
-                    break;
-                case 7:
-                    randomName = "Kyle";
-                    break;
-                case 8:
-                    randomName = "Seth";
-                    break;
-                case 9:
-                    randomName = "Danny";
-                    break;
-                case 10:
-                    randomName = "Alivia";
-                    break;
-            }
-
-            return randomName;
         }
     }
 }
