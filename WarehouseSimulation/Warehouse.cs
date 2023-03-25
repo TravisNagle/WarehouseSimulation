@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WarehouseSimulation
+﻿namespace WarehouseSimulation
 {
     internal class Warehouse
     {
@@ -21,7 +14,7 @@ namespace WarehouseSimulation
             string fileName = "simulationReport.csv";
             string filePath = $"../../../ReportFile/{fileName}";
 
-            while(!valid)
+            while (!valid)
             {
                 try
                 {
@@ -29,7 +22,7 @@ namespace WarehouseSimulation
                     numOfDocks = int.Parse(Console.ReadLine());
                     valid = true;
                 }
-                catch(FormatException e)
+                catch (FormatException e)
                 {
                     Console.WriteLine("Please enter an integer value.");
                 }
@@ -41,7 +34,8 @@ namespace WarehouseSimulation
             string longestDock = "";
             int longestDockLine = 0;
             double truckValue = 0;
-            
+            int crateCounter = 0;
+
 
             for (int i = 0; i < numOfDocks; i++)
             {
@@ -75,7 +69,6 @@ namespace WarehouseSimulation
                     {
                         Console.WriteLine("Arrival Time " + increment);
                         Truck truck = new Truck();
-                        //truck.Driver = RandomName();
                         truck.DeliveryCompany = $"Company {nameCounter++}"; //Change to random company name
 
                         int crateCount = rand.Next(10, 21);
@@ -94,7 +87,6 @@ namespace WarehouseSimulation
                         Truck arrivedTruck = Entrance.Dequeue();
                         Docks[dockIndex].JoinLine(arrivedTruck);
                         Docks[dockIndex].TotalTrucks++;
-                        trucksUnloading = true;
 
                         for (int i = 0; i < Docks.Count; i++)
                         {
@@ -113,7 +105,8 @@ namespace WarehouseSimulation
                             Truck dockedTruck = dock.Line.Peek();
                             Crate unloadedCrate = dockedTruck.Unload();
                             truckValue += unloadedCrate.Price;
-                            Docks[dockIndex].TotalCrates++;
+                            dock.TotalCrates++;
+                            trucksUnloading = true;
 
                             /*
                             Console.WriteLine($"Time Unloaded: {increment}");
@@ -123,6 +116,7 @@ namespace WarehouseSimulation
                             Console.WriteLine($"Crate Value: {String.Format("{0:0.00}", unloadedCrate.Price)}");
                             Console.WriteLine($"Dock used: {dock.Id}");
                             */
+
                             writer.Write($"{dock.Id},");
                             writer.Write($"{increment},");
                             writer.Write($"{dockedTruck.Driver},");
@@ -136,7 +130,7 @@ namespace WarehouseSimulation
 
                             if (dockedTruck.Trailer.Count != 0)
                             {
-                                Console.WriteLine("Truck has more crates");
+                                Console.WriteLine($"{dock.Id}'s truck has more crates");
                             }
                             else if (dockedTruck.Trailer.Count == 0)
                             {
@@ -144,16 +138,15 @@ namespace WarehouseSimulation
                                 if (dock.Line.Count != 0)
                                 {
                                     dock.TotalTrucks++;
-                                    Console.WriteLine("Truck is empty and another truck is in line");
+                                    Console.WriteLine($"{dock.Id}'s truck is empty and another truck is in line");
                                 }
                                 else
                                 {
                                     dock.TotalTrucks++;
-                                    Console.WriteLine("Truck is empty and no other trucks in line");
+                                    Console.WriteLine($"{dock.Id}'s truck is empty and no other trucks in line");
                                 }
                             }
                             Console.WriteLine();
-                            
                         }
                         else
                         {
@@ -161,17 +154,19 @@ namespace WarehouseSimulation
                         }
                     }
 
-                    if(trucksUnloading)
+                    foreach(var dock in Docks)
                     {
-                        foreach (var dock in Docks)
+                        if (trucksUnloading)
                         {
-                            Console.Write($"|-------|\n");
-                            Console.Write($"|       |\n");
+                            Console.Write($"|-------|      Crates: \n");
+                            Console.Write($"|-------|              {dock.TotalCrates}\n");
                             Console.Write($"|   {dock.Line.Count}   |\n");
+                            Console.Write($"|-------|\n");
+                            Console.Write($"|-------|\n");
+                            Console.Write($"|-------|\n");
                             Console.WriteLine();
                         }
-                    }                  
-
+                    }
                     increment++;
                 }
             }
@@ -185,7 +180,7 @@ namespace WarehouseSimulation
             }
             finally
             {
-                if(writer != null)
+                if (writer != null)
                 {
                     writer.Close();
                 }
@@ -211,7 +206,6 @@ namespace WarehouseSimulation
             }
 
             int truckCounter = 0;
-            int crateCounter = 0;
             double crateProfit = 0;
             double averageTimeInUse = 0;
 
@@ -230,9 +224,9 @@ namespace WarehouseSimulation
             Console.WriteLine($"Total trucks processed: {truckCounter}");
             Console.WriteLine($"Total crates processed: {crateCounter}");
             Console.WriteLine($"Total crate profits: ${String.Format("{0:0.00}", crateProfit)}");
-            Console.WriteLine($"Average crate value: ${String.Format("{0:0.00}",crateProfit / crateCounter)}");
+            Console.WriteLine($"Average crate value: ${String.Format("{0:0.00}", crateProfit / crateCounter)}");
             Console.WriteLine($"Average truck value: ${String.Format("{0:0.00}", truckValue / truckCounter)}");
-            Console.WriteLine($"Average time in use: {String.Format("{0:0.00}",averageTimeInUse / maxTime)}");
+            Console.WriteLine($"Average time in use: {String.Format("{0:0.00}", averageTimeInUse / maxTime)}");
             Console.WriteLine($"Total profit: ${String.Format("{0:0.00}", totalProfit)}");
         }
 
@@ -240,7 +234,7 @@ namespace WarehouseSimulation
         {
             int shortestLine = docks[0].Line.Count;
             int dockIndex = 0;
-            for(int i = 1; i < docks.Count; i++)
+            for (int i = 1; i < docks.Count; i++)
             {
                 if (docks[i].Line.Count < shortestLine)
                 {
@@ -255,7 +249,7 @@ namespace WarehouseSimulation
         {
             int longestLine = docks[0].Line.Count;
             int dockIndex = 0;
-            for(int i = 1; i < docks.Count; i++)
+            for (int i = 1; i < docks.Count; i++)
             {
                 if (docks[i].Line.Count > longestLine)
                 {
