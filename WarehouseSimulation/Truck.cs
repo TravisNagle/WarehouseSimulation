@@ -1,4 +1,13 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////////////
+//
+// Author: Travis Nagle, Naglet@etsu.edu
+// Course: CSCI-2210-001 - Data Structures
+// Assignment: Project 4 - Warehouse Simulation
+// Description: Implementation of the Truck class
+//
+///////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,7 +65,55 @@ namespace WarehouseSimulation
                 return _driver;
             }
         }
-        public string DeliveryCompany { get; set; }
+
+        public string _deliveryCompany;
+        public string DeliveryCompany
+        {
+            get
+            {
+                Random rand = new Random();
+                string _deliverCompany = "";
+                int randomNum = rand.Next(0, 11);
+
+                switch (randomNum)
+                {
+                    case 0:
+                        _deliveryCompany = "Crates R Us";
+                        break;
+                    case 1:
+                        _deliveryCompany = "Microsoft Truck Company";
+                        break;
+                    case 2:
+                        _deliveryCompany = "Spicy Integer Inc.";
+                        break;
+                    case 3:
+                        _deliveryCompany = "UAC";
+                        break;
+                    case 4:
+                        _deliveryCompany = "UNSC";
+                        break;
+                    case 5:
+                        _deliveryCompany = "StackStyle LLC";
+                        break;
+                    case 6:
+                        _deliveryCompany = "T.G.B.A.E. International";
+                        break;
+                    case 7:
+                        _deliveryCompany = "TeamSport";
+                        break;
+                    case 8:
+                        _deliveryCompany = "Pointer Hades Co.";
+                        break;
+                    case 9:
+                        _deliveryCompany = "ItDepends.com";
+                        break;
+                    case 10:
+                        _deliveryCompany = "The Abstraction Company";
+                        break;
+                }
+                return _deliveryCompany;
+            }
+        }
         public Stack<Crate> Trailer = new Stack<Crate>();
 
         public void Load(Crate crate)
