@@ -1,10 +1,24 @@
-﻿namespace WarehouseSimulation
+﻿///////////////////////////////////////////////////////////////////////////////
+//
+// Author: Travis Nagle, Naglet@etsu.edu
+// Course: CSCI-2210-001 - Data Structures
+// Assignment: Project 4 - Warehouse Simulation
+// Description: Implementation of the Warehouse class that takes care of all the features of the sim
+//
+///////////////////////////////////////////////////////////////////////////////
+namespace WarehouseSimulation
 {
+    /// <summary>
+    /// Implementation of a Warehouse object that handles all features of the simulation
+    /// </summary>
     internal class Warehouse
     {
         private List<Dock> Docks = new List<Dock>();
         private Queue<Truck> Entrance = new Queue<Truck>();
 
+        /// <summary>
+        /// Run method that runs the sim and displays the UI
+        /// </summary>
         public void Run()
         {
             bool valid = false;
@@ -230,6 +244,12 @@
             Console.WriteLine($"Total profit: ${String.Format("{0:0.00}", totalProfit)}");
         }
 
+        /// <summary>
+        /// ShortestDock method that checks for what the shortest dock is
+        /// to maximize the amount of crates that can be processed
+        /// </summary>
+        /// <param name="docks">List of docks being used</param>
+        /// <returns>The index value of the shortest dock</returns>
         public int ShortestDock(List<Dock> docks)
         {
             int shortestLine = docks[0].Line.Count;
@@ -245,6 +265,12 @@
             return dockIndex;
         }
 
+        /// <summary>
+        /// LongestDock method that checks for what the longest dock line is
+        /// during the simulation
+        /// </summary>
+        /// <param name="docks">List of docks being used</param>
+        /// <returns>Index value of the longest dock line</returns>
         public int LongestDock(List<Dock> docks)
         {
             int longestLine = docks[0].Line.Count;
