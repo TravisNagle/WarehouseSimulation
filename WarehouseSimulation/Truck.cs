@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 
 namespace WarehouseSimulation
 {
+    /// <summary>
+    /// Implementation of a truck object
+    /// </summary>
     internal class Truck
     {
         public string _driver;
