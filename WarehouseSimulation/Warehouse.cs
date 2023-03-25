@@ -83,7 +83,7 @@ namespace WarehouseSimulation
                     {
                         Console.WriteLine("Arrival Time " + increment);
                         Truck truck = new Truck();
-                        truck.DeliveryCompany = $"Company {nameCounter++}"; //Change to random company name
+                        //truck.DeliveryCompany = $"Company {nameCounter++}"; //Change to random company name
 
                         int crateCount = rand.Next(10, 21);
                         while (crateCount > 0)

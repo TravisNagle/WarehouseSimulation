@@ -29,22 +29,22 @@ namespace WarehouseSimulation
                 switch (randomNum)
                 {
                     case 0:
-                        _driver = "Dave";
+                        _driver = "Blade";
                         break;
                     case 1:
-                        _driver = "Bob";
+                        _driver = "Laura";
                         break;
                     case 2:
-                        _driver = "Jeff";
+                        _driver = "Patrick";
                         break;
                     case 3:
-                        _driver = "Ryan";
+                        _driver = "Flynn";
                         break;
                     case 4:
-                        _driver = "George";
+                        _driver = "Tyler";
                         break;
                     case 5:
-                        _driver = "Fred";
+                        _driver = "Colby";
                         break;
                     case 6:
                         _driver = "Chris";
@@ -67,6 +67,11 @@ namespace WarehouseSimulation
         }
 
         public string _deliveryCompany;
+
+        /// <summary>
+        /// Delivery company property that randomly sets 
+        /// a delivery company name
+        /// </summary>
         public string DeliveryCompany
         {
             get
@@ -116,11 +121,19 @@ namespace WarehouseSimulation
         }
         public Stack<Crate> Trailer = new Stack<Crate>();
 
+        /// <summary>
+        /// Load method that adds crates to the truck's stack
+        /// </summary>
+        /// <param name="crate">Crate to be added</param>
         public void Load(Crate crate)
         {
             Trailer.Push(crate);
         }
 
+        /// <summary>
+        /// Unload method that pops off the latest crate added
+        /// </summary>
+        /// <returns>Unloaded crate</returns>
         public Crate Unload()
         {
             return Trailer.Pop();
