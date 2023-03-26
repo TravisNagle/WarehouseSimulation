@@ -21,6 +21,10 @@ namespace WarehouseSimulation
     internal class Truck
     {
         public string _driver;
+
+        /// <summary>
+        /// Driver property that randomly selects a driver name
+        /// </summary>
         public string Driver 
         { 
             get

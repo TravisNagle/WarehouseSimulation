@@ -44,12 +44,10 @@ namespace WarehouseSimulation
 
             int maxTime = 48;
             int increment = 0;
-            int nameCounter = 0;
             string longestDock = "";
             int longestDockLine = 0;
             double truckValue = 0;
             int crateCounter = 0;
-
 
             for (int i = 0; i < numOfDocks; i++)
             {
@@ -83,7 +81,6 @@ namespace WarehouseSimulation
                     {
                         Console.WriteLine("Arrival Time " + increment);
                         Truck truck = new Truck();
-                        //truck.DeliveryCompany = $"Company {nameCounter++}"; //Change to random company name
 
                         int crateCount = rand.Next(10, 21);
                         while (crateCount > 0)
