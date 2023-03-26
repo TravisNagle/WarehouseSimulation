@@ -68,7 +68,7 @@ namespace WarehouseSimulation
 
                     int arrivalTime = 0;
 
-                    if (increment < 12 || increment > 36)
+                    if (increment < 12 || increment > 36) //Simulates morning and evening hours with a reduced chance for a truck to appear
                     {
                         arrivalTime = rand.Next(1, 60);
                     }
@@ -111,7 +111,7 @@ namespace WarehouseSimulation
 
                     foreach (Dock dock in Docks)
                     {
-                        if (dock.Line.Count > 0)
+                        if (dock.Line.Count > 0) //Checks if a dock has a truck currently in it
                         {
                             Truck dockedTruck = dock.Line.Peek();
                             Crate unloadedCrate = dockedTruck.Unload();
