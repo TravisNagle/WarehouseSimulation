@@ -40,6 +40,7 @@ namespace WarehouseSimulation
             }
         }
         public double _price;
+
         /// <summary>
         /// Price property that sets a random crate value between 50-500
         /// </summary>

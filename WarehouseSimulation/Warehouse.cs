@@ -164,20 +164,7 @@ namespace WarehouseSimulation
                             dock.TimeNotInUse++;
                         }
                     }
-
-                    foreach(var dock in Docks)
-                    {
-                        if (trucksUnloading)
-                        {
-                            Console.Write($"|-------|      Crates: \n");
-                            Console.Write($"|-------|              {dock.TotalCrates}\n");
-                            Console.Write($"|   {dock.Line.Count}   |\n");
-                            Console.Write($"|-------|\n");
-                            Console.Write($"|-------|\n");
-                            Console.Write($"|-------|\n");
-                            Console.WriteLine();
-                        }
-                    }
+                    UserInterface(Docks, trucksUnloading);
                     increment++;
                 }
             }
@@ -281,6 +268,29 @@ namespace WarehouseSimulation
                 }
             }
             return dockIndex;
+        }
+        
+        /// <summary>
+        /// Console based user interface that displays each dock and the current
+        /// number of trucks, the crates being processed, and the total number of crates
+        /// </summary>
+        /// <param name="docks">List of docks</param>
+        /// <param name="trucksUnloading">If the trucks are being unloaded or if </param>
+        public void UserInterface(List<Dock> docks, bool trucksUnloading)
+        {
+            foreach (var dock in Docks)
+            {
+                if (trucksUnloading)
+                {
+                    Console.Write($"|-------|      Crates: \n");
+                    Console.Write($"|-------|              {dock.TotalCrates}\n");
+                    Console.Write($"|   {dock.Line.Count}   |\n");
+                    Console.Write($"|-------|\n");
+                    Console.Write($"|-------|\n");
+                    Console.Write($"|-------|\n");
+                    Console.WriteLine();
+                }
+            }
         }
     }
 }
