@@ -119,15 +119,6 @@ namespace WarehouseSimulation
                             dock.TotalCrates++;
                             trucksUnloading = true;
 
-                            /*
-                            Console.WriteLine($"Time Unloaded: {increment}");
-                            Console.WriteLine($"Driver: {dockedTruck.Driver}");
-                            Console.WriteLine($"Company: {dockedTruck.DeliveryCompany}");
-                            Console.WriteLine($"Crate ID: {unloadedCrate.Id}");
-                            Console.WriteLine($"Crate Value: {String.Format("{0:0.00}", unloadedCrate.Price)}");
-                            Console.WriteLine($"Dock used: {dock.Id}");
-                            */
-
                             writer.Write($"{dock.Id},");
                             writer.Write($"{increment},");
                             writer.Write($"{dockedTruck.Driver},");
