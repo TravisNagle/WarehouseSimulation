@@ -180,7 +180,7 @@ namespace WarehouseSimulation
 
             foreach (Dock dock in Docks)
             {
-                double dockCost = dock.TimeInUse * 100;
+                double dockCost = maxTime * 100;
 
                 Console.WriteLine($"Dock ID: {dock.Id}");
                 Console.WriteLine($"Time in use: {dock.TimeInUse}");
