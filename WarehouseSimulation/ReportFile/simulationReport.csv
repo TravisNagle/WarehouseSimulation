@@ -1,138 +1,102 @@
 Dock ID,Time,Driver,Company,Crate ID,Crate Value
-TWD0,0,Danny,StackStyle LLC,3407,496.06
-TWD0,1,Kyle,Microsoft Truck Company,8227,107.73
-TWD0,2,Flynn,Microsoft Truck Company,6790,340.56
-TWD0,3,Alivia,Pointer Hades Co.,9388,448.98
-TWD1,3,Kyle,UNSC,1860,314.18
-TWD0,4,Patrick,Spicy Integer Inc.,9139,201.56
-TWD1,4,Danny,UAC,9587,431.46
-TWD2,4,Tyler,Spicy Integer Inc.,4657,121.54
-TWD0,5,Danny,UAC,0355,401.02
-TWD1,5,Danny,TeamSport,4003,60.21
-TWD2,5,Colby,Crates R Us,4495,131.20
-TWD0,6,Colby,ItDepends.com,7183,220.54
-TWD1,6,Danny,StackStyle LLC,2827,428.66
-TWD2,6,Tyler,Pointer Hades Co.,3395,430.46
-TWD0,7,Chris,UNSC,5090,489.58
-TWD1,7,Chris,StackStyle LLC,4299,272.20
-TWD2,7,Patrick,The Abstraction Company,2478,104.92
-TWD0,8,Alivia,StackStyle LLC,2358,493.75
-TWD1,8,Alivia,The Abstraction Company,3713,355.73
-TWD2,8,Tyler,Microsoft Truck Company,2215,92.02
-TWD0,9,Kyle,Crates R Us,8655,296.57
-TWD1,9,Flynn,T.G.B.A.E. International,8259,454.79
-TWD2,9,Laura,Crates R Us,9613,462.22
-TWD0,10,Blade,Crates R Us,2105,223.14
-TWD1,10,Colby,Crates R Us,0674,457.76
-TWD2,10,Chris,The Abstraction Company,1263,434.92
-TWD0,11,Patrick,UAC,1946,115.20
-TWD1,11,Seth,Pointer Hades Co.,7424,289.97
-TWD2,11,Colby,Spicy Integer Inc.,6422,444.51
-TWD0,12,Flynn,UNSC,6076,203.39
-TWD1,12,Laura,The Abstraction Company,7406,340.96
-TWD2,12,Seth,The Abstraction Company,9154,241.65
-TWD0,13,Laura,Pointer Hades Co.,9002,215.47
-TWD1,13,Seth,Microsoft Truck Company,7290,494.85
-TWD2,13,Danny,Spicy Integer Inc.,2223,300.78
-TWD0,14,Patrick,StackStyle LLC,5080,448.15
-TWD1,14,Danny,Spicy Integer Inc.,5901,498.66
-TWD2,14,Blade,Spicy Integer Inc.,3049,416.07
-TWD0,15,Patrick,Spicy Integer Inc.,2674,205.78
-TWD1,15,Laura,Microsoft Truck Company,9468,128.03
-TWD2,15,Alivia,ItDepends.com,9351,211.63
-TWD0,16,Kyle,Microsoft Truck Company,0585,117.92
-TWD1,16,Blade,ItDepends.com,0570,267.80
-TWD2,16,Patrick,StackStyle LLC,9013,72.10
-TWD0,17,Laura,T.G.B.A.E. International,8822,136.98
-TWD1,17,Flynn,TeamSport,9942,218.60
-TWD2,17,Patrick,Crates R Us,6790,422.03
-TWD0,18,Tyler,ItDepends.com,4776,394.56
-TWD1,18,Patrick,Microsoft Truck Company,6951,174.22
-TWD2,18,Alivia,ItDepends.com,8974,452.61
-TWD0,19,Chris,ItDepends.com,1194,128.53
-TWD1,19,Tyler,Microsoft Truck Company,7005,343.38
-TWD2,19,Alivia,UNSC,7029,373.90
-TWD0,20,Patrick,StackStyle LLC,1118,154.01
-TWD1,20,Laura,Microsoft Truck Company,6336,300.93
-TWD2,20,Chris,UAC,2463,468.87
-TWD0,21,Colby,TeamSport,9000,203.96
-TWD1,21,Seth,UNSC,1260,435.42
-TWD2,21,Chris,StackStyle LLC,5007,247.12
-TWD0,22,Seth,UNSC,5663,63.09
-TWD1,22,Tyler,Spicy Integer Inc.,6979,113.64
-TWD2,22,Danny,StackStyle LLC,6031,61.90
-TWD0,23,Colby,T.G.B.A.E. International,3828,108.55
-TWD1,23,Flynn,TeamSport,4259,379.93
-TWD2,23,Kyle,Crates R Us,4048,241.43
-TWD0,24,Seth,ItDepends.com,2809,208.56
-TWD1,24,Flynn,Spicy Integer Inc.,3026,195.59
-TWD2,24,Tyler,Pointer Hades Co.,5523,388.12
-TWD0,25,Blade,Spicy Integer Inc.,9336,279.65
-TWD1,25,Laura,Pointer Hades Co.,5193,111.56
-TWD2,25,Tyler,Crates R Us,9558,361.50
-TWD0,26,Flynn,UNSC,9375,398.28
-TWD1,26,Colby,The Abstraction Company,5156,269.08
-TWD2,26,Tyler,Pointer Hades Co.,0296,434.22
-TWD0,27,Chris,Crates R Us,0230,188.63
-TWD1,27,Kyle,The Abstraction Company,8689,389.58
-TWD2,27,Alivia,Pointer Hades Co.,0803,180.13
-TWD0,28,Laura,TeamSport,0692,184.59
-TWD1,28,Patrick,StackStyle LLC,5016,152.37
-TWD2,28,Blade,Spicy Integer Inc.,9069,74.73
-TWD0,29,Alivia,The Abstraction Company,1654,167.95
-TWD1,29,Seth,Microsoft Truck Company,6797,245.70
-TWD2,29,Danny,Spicy Integer Inc.,6875,395.19
-TWD0,30,Alivia,Spicy Integer Inc.,0792,369.15
-TWD1,30,Danny,ItDepends.com,8245,100.03
-TWD2,30,Kyle,UAC,1617,347.13
-TWD0,31,Seth,Crates R Us,1920,441.30
-TWD1,31,Patrick,UNSC,6422,311.49
-TWD2,31,Chris,Pointer Hades Co.,6841,376.18
-TWD0,32,Danny,Spicy Integer Inc.,1860,201.68
-TWD1,32,Kyle,The Abstraction Company,3209,322.91
-TWD2,32,Chris,TeamSport,2036,305.47
-TWD0,33,Chris,StackStyle LLC,9804,104.59
-TWD1,33,Blade,Crates R Us,2899,467.06
-TWD2,33,Tyler,Crates R Us,5466,93.56
-TWD0,34,Seth,UAC,4219,219.88
-TWD1,34,Laura,Spicy Integer Inc.,4709,212.00
-TWD2,34,Tyler,The Abstraction Company,7082,435.53
-TWD0,35,Alivia,Microsoft Truck Company,2144,402.80
-TWD1,35,Danny,Crates R Us,7789,286.72
-TWD2,35,Alivia,Microsoft Truck Company,5447,242.13
-TWD0,36,Chris,Crates R Us,4573,405.39
-TWD1,36,Blade,The Abstraction Company,7985,294.36
-TWD2,36,Laura,Crates R Us,6474,56.36
-TWD0,37,Kyle,TeamSport,6116,258.95
-TWD1,37,Alivia,TeamSport,0350,173.28
-TWD2,37,Danny,The Abstraction Company,9361,135.44
-TWD0,38,Danny,T.G.B.A.E. International,0096,450.44
-TWD1,38,Alivia,Spicy Integer Inc.,3865,290.83
-TWD2,38,Tyler,TeamSport,4821,421.18
-TWD0,39,Laura,Crates R Us,7894,97.04
-TWD1,39,Blade,UAC,8178,419.26
-TWD2,39,Tyler,TeamSport,6780,496.70
-TWD0,40,Seth,TeamSport,8806,270.90
-TWD1,40,Danny,Crates R Us,0955,343.32
-TWD2,40,Danny,StackStyle LLC,0404,287.77
-TWD0,41,Chris,StackStyle LLC,0835,255.86
-TWD1,41,Colby,ItDepends.com,0156,245.89
-TWD2,41,Colby,TeamSport,2073,124.12
-TWD0,42,Patrick,The Abstraction Company,0337,274.19
-TWD1,42,Kyle,UNSC,0908,150.06
-TWD2,42,Seth,Crates R Us,0605,218.97
-TWD0,43,Kyle,TeamSport,6569,295.04
-TWD1,43,Laura,Microsoft Truck Company,1717,135.04
-TWD2,43,Danny,UNSC,0259,387.77
-TWD0,44,Flynn,UNSC,0289,171.59
-TWD1,44,Blade,Microsoft Truck Company,7434,121.57
-TWD2,44,Colby,UAC,9228,208.72
-TWD0,45,Kyle,UAC,7502,289.14
-TWD1,45,Kyle,UAC,8311,221.77
-TWD2,45,Danny,Microsoft Truck Company,5222,266.73
-TWD0,46,Laura,Microsoft Truck Company,0315,434.89
-TWD1,46,Flynn,UNSC,6464,74.69
-TWD2,46,Flynn,UNSC,0314,448.06
-TWD0,47,Danny,Pointer Hades Co.,7042,127.10
-TWD1,47,Tyler,Crates R Us,9459,151.73
-TWD2,47,Danny,Spicy Integer Inc.,3698,74.39
+TWD0,8,Patrick,Spicy Integer Inc.,2042,275.22
+TWD0,9,Tyler,StackStyle LLC,3692,298.52
+TWD0,10,Patrick,T.G.B.A.E. International,9874,199.53
+TWD0,11,Chris,Crates R Us,6963,362.45
+TWD0,12,Kyle,T.G.B.A.E. International,3389,91.05
+TWD0,13,Seth,UNSC,7708,327.41
+TWD0,14,Alivia,Spicy Integer Inc.,2912,118.98
+TWD0,15,Flynn,TeamSport,0789,270.75
+TWD1,15,Kyle,StackStyle LLC,6782,419.33
+TWD0,16,Kyle,ItDepends.com,1107,287.18
+TWD1,16,Danny,Microsoft Truck Company,5496,72.00
+TWD0,17,Kyle,Spicy Integer Inc.,0745,466.63
+TWD1,17,Chris,The Abstraction Company,7555,385.15
+TWD0,18,Flynn,Spicy Integer Inc.,3381,125.69
+TWD1,18,Flynn,Pointer Hades Co.,0780,214.76
+TWD0,19,Danny,T.G.B.A.E. International,6827,278.45
+TWD1,19,Flynn,Spicy Integer Inc.,4989,386.71
+TWD0,20,Laura,Crates R Us,4109,176.79
+TWD1,20,Seth,TeamSport,0663,368.92
+TWD2,20,Alivia,Spicy Integer Inc.,6182,328.68
+TWD0,21,Kyle,The Abstraction Company,0573,357.96
+TWD1,21,Chris,UAC,4478,388.91
+TWD2,21,Chris,Crates R Us,0975,443.03
+TWD0,22,Patrick,ItDepends.com,5503,492.37
+TWD1,22,Flynn,Pointer Hades Co.,2712,231.37
+TWD2,22,Danny,Spicy Integer Inc.,3790,459.91
+TWD0,23,Blade,ItDepends.com,5973,210.42
+TWD1,23,Colby,StackStyle LLC,4621,266.49
+TWD2,23,Kyle,UNSC,6277,71.05
+TWD0,24,Seth,Crates R Us,8135,158.74
+TWD1,24,Laura,Spicy Integer Inc.,0954,372.36
+TWD2,24,Seth,UAC,9256,158.11
+TWD0,25,Flynn,The Abstraction Company,7895,332.03
+TWD1,25,Danny,Microsoft Truck Company,1229,323.37
+TWD2,25,Chris,Spicy Integer Inc.,5786,127.77
+TWD0,26,Chris,Microsoft Truck Company,5435,367.01
+TWD1,26,Kyle,StackStyle LLC,3838,74.75
+TWD2,26,Chris,StackStyle LLC,4902,150.34
+TWD0,27,Danny,UNSC,7013,324.15
+TWD1,27,Blade,StackStyle LLC,1150,442.90
+TWD2,27,Flynn,UAC,0496,140.61
+TWD0,28,Patrick,TeamSport,7496,345.22
+TWD1,28,Seth,Pointer Hades Co.,4819,216.08
+TWD2,28,Kyle,StackStyle LLC,8169,123.24
+TWD0,29,Patrick,The Abstraction Company,4366,50.94
+TWD1,29,Chris,Crates R Us,0731,232.27
+TWD2,29,Patrick,UAC,8959,115.75
+TWD0,30,Seth,StackStyle LLC,3218,275.87
+TWD1,30,Patrick,Crates R Us,5703,475.70
+TWD2,30,Patrick,Spicy Integer Inc.,1561,160.48
+TWD0,31,Blade,UNSC,0103,297.97
+TWD1,31,Chris,StackStyle LLC,5283,63.70
+TWD2,31,Colby,TeamSport,1980,293.15
+TWD0,32,Kyle,T.G.B.A.E. International,6283,257.48
+TWD1,32,Alivia,Pointer Hades Co.,3140,154.85
+TWD2,32,Kyle,Crates R Us,7454,98.22
+TWD0,33,Chris,UNSC,1458,66.23
+TWD1,33,Kyle,Spicy Integer Inc.,1106,374.35
+TWD2,33,Danny,TeamSport,6593,68.81
+TWD0,34,Patrick,The Abstraction Company,4865,384.50
+TWD1,34,Blade,Spicy Integer Inc.,2157,104.09
+TWD2,34,Alivia,Spicy Integer Inc.,7107,115.41
+TWD0,35,Seth,Spicy Integer Inc.,1991,110.13
+TWD1,35,Seth,Pointer Hades Co.,6456,407.06
+TWD2,35,Seth,StackStyle LLC,9506,327.17
+TWD0,36,Kyle,TeamSport,5906,76.89
+TWD1,36,Kyle,UNSC,5948,480.90
+TWD2,36,Tyler,ItDepends.com,4763,410.61
+TWD0,37,Flynn,UAC,7635,319.38
+TWD1,37,Chris,The Abstraction Company,6861,401.94
+TWD2,37,Alivia,Spicy Integer Inc.,0882,321.91
+TWD0,38,Danny,Microsoft Truck Company,4355,458.72
+TWD1,38,Chris,The Abstraction Company,7803,431.62
+TWD2,38,Flynn,The Abstraction Company,3006,248.80
+TWD0,39,Laura,UNSC,6240,310.42
+TWD1,39,Patrick,Microsoft Truck Company,7169,104.47
+TWD2,39,Tyler,UAC,6847,180.98
+TWD0,40,Danny,UNSC,2728,343.88
+TWD1,40,Chris,Crates R Us,0132,500.67
+TWD2,40,Laura,Pointer Hades Co.,9852,117.77
+TWD0,41,Kyle,ItDepends.com,0974,172.06
+TWD1,41,Flynn,Crates R Us,2620,372.82
+TWD2,41,Alivia,Spicy Integer Inc.,3058,419.94
+TWD0,42,Flynn,StackStyle LLC,3557,347.71
+TWD1,42,Kyle,T.G.B.A.E. International,5279,159.54
+TWD2,42,Alivia,The Abstraction Company,6644,485.74
+TWD0,43,Kyle,The Abstraction Company,3530,213.24
+TWD1,43,Colby,T.G.B.A.E. International,4639,486.76
+TWD2,43,Patrick,Microsoft Truck Company,0593,398.14
+TWD0,44,Colby,UNSC,1070,256.18
+TWD1,44,Colby,Spicy Integer Inc.,1613,304.83
+TWD2,44,Seth,T.G.B.A.E. International,1163,237.59
+TWD0,45,Alivia,ItDepends.com,4782,292.25
+TWD1,45,Colby,T.G.B.A.E. International,3096,273.27
+TWD2,45,Alivia,UAC,7164,252.90
+TWD0,46,Kyle,ItDepends.com,7933,56.49
+TWD1,46,Seth,Microsoft Truck Company,9660,164.47
+TWD2,46,Tyler,UAC,1235,167.77
+TWD0,47,Blade,Spicy Integer Inc.,8223,245.73
+TWD1,47,Alivia,Pointer Hades Co.,6280,97.58
+TWD2,47,Chris,Crates R Us,8711,87.84

@@ -80,7 +80,6 @@ namespace WarehouseSimulation
 
                     if (arrivalTime > 50)
                     {
-                        Console.WriteLine("Arrival Time " + increment);
                         Truck truck = new Truck();
 
                         int crateCount = rand.Next(10, 21);
@@ -91,7 +90,7 @@ namespace WarehouseSimulation
                             crateCount--;
                         }
                         Entrance.Enqueue(truck);
-                        Console.WriteLine("A truck has entered the entrance");
+                        Console.WriteLine("A truck has entered the entrance at increment " + increment);
                     }
 
                     if (Entrance.Count > 0)
@@ -290,6 +289,7 @@ namespace WarehouseSimulation
                     Console.ResetColor();
                     Console.Write($"----|\n");                    
                 }
+                Console.Write("Press \"ENTER\" to continue...\n");
                 Console.ReadLine();
             }
         }
