@@ -159,7 +159,7 @@ namespace WarehouseSimulation
                         }
                     }
                     //UserInterface(Docks, trucksUnloading);
-                    GUI(increment, dockIndex, numOfDocks, trucksUnloading, truckLeavingIndex);
+                    GUI(increment, dockIndex, numOfDocks, trucksUnloading, truckLeavingIndex, Docks);
                     increment++;
                 }
             }
@@ -178,6 +178,10 @@ namespace WarehouseSimulation
                     writer.Close();
                 }
             }
+
+            Console.WriteLine("////////////////////////////////////");
+            Console.WriteLine("          SIMULATION REPORT         ");
+            Console.WriteLine("////////////////////////////////////");
 
             double totalRevenue = 0;
             double totalCost = 0;
@@ -273,7 +277,8 @@ namespace WarehouseSimulation
         /// <param name="totalDocks">Total number of docks in sim</param>
         /// <param name="trucksUnloading">Boolean value that checks if a truck is currently unloading at a dock</param>
         /// <param name="truckLeavingIndex">Index of dock that a truck is leaving from</param>
-        public void GUI(int increment, int dockIndex, int totalDocks, bool trucksUnloading, int truckLeavingIndex)
+        /// <param name="Docks">List of Docks used in sim</param>
+        public void GUI(int increment, int dockIndex, int totalDocks, bool trucksUnloading, int truckLeavingIndex, List<Dock> Docks)
         {
             string[] dockDesign = new string[totalDocks];
             if(dockIndex != -1 || trucksUnloading)
@@ -281,16 +286,16 @@ namespace WarehouseSimulation
                 Console.WriteLine($"Time Increment: {increment}");
                 for (int i = 0; i < dockDesign.Length; i++)
                 {
-                    Console.Write($"|----");
                     if (dockIndex == i) Console.ForegroundColor = ConsoleColor.Green;
                     if (truckLeavingIndex == i) Console.ForegroundColor = ConsoleColor.Red;
 
-                    Console.Write(i);
+                    Console.Write($"|----{i}----|");
                     Console.ResetColor();
-                    Console.Write($"----|\n");                    
+                    Console.Write($"          Total Crates: {Docks[i].TotalCrates}\n");
                 }
                 Console.Write("Press \"ENTER\" to continue...\n");
                 Console.ReadLine();
+                Console.Clear();
             }
         }
     }
