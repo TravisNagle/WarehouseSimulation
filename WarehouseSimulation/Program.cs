@@ -17,6 +17,12 @@ namespace WarehouseSimulation
         static void Main(string[] args)
         {
             Warehouse warehouse = new Warehouse();
+
+            Console.WriteLine("////////////////////////////////////");
+            Console.WriteLine($"     Truck Warehouse Simulation    ");
+            Console.WriteLine("////////////////////////////////////");
+
+
             warehouse.Run();
         }
     }

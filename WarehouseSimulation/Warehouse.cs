@@ -48,6 +48,7 @@ namespace WarehouseSimulation
             int longestDockLine = 0;
             double truckValue = 0;
             int crateCounter = 0;
+            bool trucksUnloading = false;
 
             for (int i = 0; i < numOfDocks; i++)
             {
@@ -63,9 +64,9 @@ namespace WarehouseSimulation
 
                 while (increment < maxTime)
                 {
-                    int dockIndex = ShortestDock(Docks);
-                    bool trucksUnloading = false;
-
+                    Queue<int> trucksProcessing = new Queue<int>();
+                    int dockIndex = -1;
+                    int truckLeavingIndex = -1;
                     int arrivalTime = 0;
 
                     if (increment < 12 || increment > 36) //Simulates morning and evening hours with a reduced chance for a truck to appear
@@ -95,6 +96,7 @@ namespace WarehouseSimulation
 
                     if (Entrance.Count > 0)
                     {
+                        dockIndex = ShortestDock(Docks);
                         Truck arrivedTruck = Entrance.Dequeue();
                         Docks[dockIndex].JoinLine(arrivedTruck);
                         Docks[dockIndex].TotalTrucks++;
@@ -109,17 +111,17 @@ namespace WarehouseSimulation
                         }
                     }
 
-                    foreach (Dock dock in Docks)
+                    for (int i = 0; i < Docks.Count; i++)
                     {
-                        if (dock.Line.Count > 0) //Checks if a dock has a truck currently in it
+                        if (Docks[i].Line.Count > 0) //Checks if a dock has a truck currently in it
                         {
-                            Truck dockedTruck = dock.Line.Peek();
+                            Truck dockedTruck = Docks[i].Line.Peek();
                             Crate unloadedCrate = dockedTruck.Unload();
                             truckValue += unloadedCrate.Price;
-                            dock.TotalCrates++;
+                            Docks[i].TotalCrates++;
                             trucksUnloading = true;
 
-                            writer.Write($"{dock.Id},");
+                            writer.Write($"{Docks[i].Id},");
                             writer.Write($"{increment},");
                             writer.Write($"{dockedTruck.Driver},");
                             writer.Write($"{dockedTruck.DeliveryCompany},");
@@ -127,35 +129,38 @@ namespace WarehouseSimulation
                             writer.Write($"{String.Format("{0:0.00}", unloadedCrate.Price)}");
                             writer.WriteLine();
 
-                            dock.TotalSales += unloadedCrate.Price;
-                            dock.TimeInUse++;
+                            Docks[i].TotalSales += unloadedCrate.Price;
+                            Docks[i].TimeInUse++;
 
                             if (dockedTruck.Trailer.Count != 0)
                             {
-                                Console.WriteLine($"{dock.Id}'s truck has more crates");
+                                Console.WriteLine($"{Docks[i].Id}'s truck has more crates");
                             }
                             else if (dockedTruck.Trailer.Count == 0)
                             {
-                                dock.SendOff();
-                                if (dock.Line.Count != 0)
+                                Docks[i].SendOff();
+                                if (Docks[i].Line.Count != 0)
                                 {
-                                    dock.TotalTrucks++;
-                                    Console.WriteLine($"{dock.Id}'s truck is empty and another truck is in line");
+                                    Docks[i].TotalTrucks++;
+                                    truckLeavingIndex = i;
+                                    Console.WriteLine($"{Docks[i].Id}'s truck is empty and another truck is in line");
                                 }
                                 else
                                 {
-                                    dock.TotalTrucks++;
-                                    Console.WriteLine($"{dock.Id}'s truck is empty and no other trucks in line");
+                                    Docks[i].TotalTrucks++;
+                                    truckLeavingIndex = i;
+                                    Console.WriteLine($"{Docks[i].Id}'s truck is empty and no other trucks in line");
                                 }
                             }
                             Console.WriteLine();
                         }
                         else
                         {
-                            dock.TimeNotInUse++;
+                            Docks[i].TimeNotInUse++;
                         }
                     }
-                    UserInterface(Docks, trucksUnloading);
+                    //UserInterface(Docks, trucksUnloading);
+                    GUI(increment, dockIndex, numOfDocks, trucksUnloading, truckLeavingIndex);
                     increment++;
                 }
             }
@@ -260,27 +265,32 @@ namespace WarehouseSimulation
             }
             return dockIndex;
         }
-        
+
         /// <summary>
-        /// Console based user interface that displays each dock and the current
-        /// number of trucks, the crates being processed, and the total number of crates
+        /// Simple GUI that displays green when a truck arrives at a dock and red once a truck leaves
         /// </summary>
-        /// <param name="docks">List of docks</param>
-        /// <param name="trucksUnloading">If the trucks are being unloaded or if </param>
-        public void UserInterface(List<Dock> docks, bool trucksUnloading)
+        /// <param name="increment">Time increment of sim</param>
+        /// <param name="dockIndex">Index of dock that a truck arrived at</param>
+        /// <param name="totalDocks">Total number of docks in sim</param>
+        /// <param name="trucksUnloading">Boolean value that checks if a truck is currently unloading at a dock</param>
+        /// <param name="truckLeavingIndex">Index of dock that a truck is leaving from</param>
+        public void GUI(int increment, int dockIndex, int totalDocks, bool trucksUnloading, int truckLeavingIndex)
         {
-            foreach (var dock in Docks)
+            string[] dockDesign = new string[totalDocks];
+            if(dockIndex != -1 || trucksUnloading)
             {
-                if (trucksUnloading)
+                Console.WriteLine($"Time Increment: {increment}");
+                for (int i = 0; i < dockDesign.Length; i++)
                 {
-                    Console.Write($"|-------|      Crates: \n");
-                    Console.Write($"|-------|              {dock.TotalCrates}\n");
-                    Console.Write($"|   {dock.Line.Count}   |\n");
-                    Console.Write($"|-------|\n");
-                    Console.Write($"|-------|\n");
-                    Console.Write($"|-------|\n");
-                    Console.WriteLine();
+                    Console.Write($"|----");
+                    if (dockIndex == i) Console.ForegroundColor = ConsoleColor.Green;
+                    if (truckLeavingIndex == i) Console.ForegroundColor = ConsoleColor.Red;
+
+                    Console.Write(i);
+                    Console.ResetColor();
+                    Console.Write($"----|\n");                    
                 }
+                Console.ReadLine();
             }
         }
     }
