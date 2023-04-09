@@ -293,7 +293,8 @@ namespace WarehouseSimulation
                     Console.ResetColor();
                     Console.Write($"          Total Crates: {Docks[i].TotalCrates}\n");
                 }
-                Console.Write("Press \"ENTER\" to continue...\n");
+                if (increment != 47) Console.Write("Press \"ENTER\" to continue...\n");
+                else Console.Write("Press \"ENTER\" to end the simulation...\n");
                 Console.ReadLine();
                 Console.Clear();
             }
