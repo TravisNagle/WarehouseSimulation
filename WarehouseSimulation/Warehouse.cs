@@ -286,15 +286,20 @@ namespace WarehouseSimulation
                 Console.WriteLine($"Time Increment: {increment}");
                 for (int i = 0; i < dockDesign.Length; i++)
                 {
-                    if (dockIndex == i) Console.ForegroundColor = ConsoleColor.Green;
-                    if (truckLeavingIndex == i) Console.ForegroundColor = ConsoleColor.Red;
+                    if (dockIndex == i)
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    if (truckLeavingIndex == i) 
+                        Console.ForegroundColor = ConsoleColor.Red;
 
                     Console.Write($"|----{i}----|");
                     Console.ResetColor();
                     Console.Write($"          Total Crates: {Docks[i].TotalCrates}\n");
                 }
-                if (increment != 47) Console.Write("Press \"ENTER\" to continue...\n");
-                else Console.Write("Press \"ENTER\" to end the simulation...\n");
+                if (increment != 47) 
+                    Console.Write("Press \"ENTER\" to continue...\n");
+                else 
+                    Console.Write("Press \"ENTER\" to end the simulation...\n");
+
                 Console.ReadLine();
                 Console.Clear();
             }
