@@ -158,7 +158,6 @@ namespace WarehouseSimulation
                             Docks[i].TimeNotInUse++;
                         }
                     }
-                    //UserInterface(Docks, trucksUnloading);
                     GUI(increment, dockIndex, numOfDocks, trucksUnloading, truckLeavingIndex, Docks);
                     increment++;
                 }
@@ -295,12 +294,8 @@ namespace WarehouseSimulation
                     Console.ResetColor();
                     Console.Write($"          Total Crates: {Docks[i].TotalCrates}\n");
                 }
-                if (increment != 47) 
-                    Console.Write("Press \"ENTER\" to continue...\n");
-                else 
-                    Console.Write("Press \"ENTER\" to end the simulation...\n");
 
-                Console.ReadLine();
+                Thread.Sleep(500);
                 Console.Clear();
             }
         }
